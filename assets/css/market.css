@@ -18,6 +18,10 @@
     color: var(--primary-color);
 }
 
+.text-light-grey {
+    color: var(--light-grey);
+}
+
 .text-cyan {
     color: var(--cyan);
 }
@@ -26,6 +30,7 @@
 .main-body {
     padding-left: 120px;
     padding-right: 120px;
+    padding-bottom: 40px;
 }
 
 .main-body header h1 {
@@ -70,4 +75,145 @@
     background-color: transparent;
     border: none;
     color: var(--light-grey);
+}
+
+.coin-info {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 18px;
+    height: 100%;
+}
+
+.coin-info .row {
+    align-items: center;
+}
+
+.coin-logo {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.coin-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.coin-info p {
+    margin: 0;
+}
+
+.coin-info .coin-name {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.coin-price {
+    color: #fff;
+    font-size: 16px !important;
+    font-weight: 600;
+    margin-top: 18px !important;
+}
+
+.coin-price span {
+    color: var(--profit-text);
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    /* gap: 2px; */
+}
+
+.coin-price ion-icon {
+    font-size: 11px;
+}
+
+.coin-info .img-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-info .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.coin-pagination {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    .main-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-body header {
+        padding: 20px;
+    }
+
+    .main-body header h1 {
+        font-size: 24px;
+    }
+
+    .main-body header p {
+        font-size: 13px;
+    }
+
+    .header-controls {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    /* Coin cards */
+
+    .coin-slider {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .coin-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .coin-slider > .col-md-3 {
+        flex: 0 0 auto;
+        width: auto;
+        scroll-snap-align: start;
+    }
+
+    /* Pagination */
+
+    .coin-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-top: 18px;
+    }
+
+    .pagination-dot {
+        width: 7px;
+        height: 7px;
+        background-color: #787A89;
+        border-radius: 50%;
+    }
+
+    .pagination-dot.active {
+        background-color: #454754;
+        transform: scale(1.2);
+    }
 }
