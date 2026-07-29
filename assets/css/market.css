@@ -1,0 +1,73 @@
+:root {
+    --bg-color: #080808;
+    --charcoal: #121318;
+    --primary-color: #5367FE;
+    --profit-text: #049E68;
+    --loss-text: #D52525;
+    --light-grey: #787A89;
+    --light-blue: #3671E9;
+    --cyan: #026DCF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-primary-color {
+    color: var(--primary-color);
+}
+
+.text-cyan {
+    color: var(--cyan);
+}
+
+
+.main-body {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.main-body header h1 {
+    font-size: 30px;
+}
+
+.main-body header p {
+    font-size: 14px;
+}
+
+.main-body header {
+    padding: 25px;
+    color: #fff;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-controls .btn {
+    color: var(--light-grey);
+}
+
+.date-picker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--light-grey);
+}
+
+.date-picker input::-webkit-calendar-picker-indicator {
+    filter: invert(55%);
+    cursor: pointer;
+}
+
+.date-picker input {
+    padding-left: 38px;
+    width: 170px;
+    background-color: transparent;
+    border: none;
+    color: var(--light-grey);
+}
