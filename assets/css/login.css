@@ -1,0 +1,262 @@
+:root {
+    --bg-color: #080808;
+    --charcoal: #121318;
+    --primary-color: #5367FE;
+}
+
+.text-primary-color {
+    color: var(--primary-color);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#login-card {
+    background-color: var(--charcoal);
+    width: 450px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#login-card h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#login-card input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px 5px;
+}
+
+#login-card input::placeholder {
+    color: #888;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.login-options a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-options a:last-child {
+    color: var(--primary-color);
+}
+
+#login-card button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#login-card p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#login-card p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.divider-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 13px;
+    margin: 30px 0;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: "";
+    height: 1px;
+    background-color: #555;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 24px;
+}
+
+
+/* Register Page */
+
+.agreement {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.agreement ion-icon {
+    color: var(--primary-color);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.agreement p {
+    color: #888;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: left !important;
+    margin: 0;
+}
+
+.agreement p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.agreement p a:hover {
+    text-decoration: underline;
+}
+
+
+/*verification page */
+#reg-confirm-heading {
+    margin-bottom: 0 !important;
+}
+
+#login-card > p {
+    text-align: left;
+    color: white;
+    font-size: 13px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    background-color: transparent;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.radio-option label {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked + label {
+    color: var(--primary-color);
+}
+
+#login-card .contact-info {
+    color: #5a5a5a;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+#login-card button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* forget-password css */
+.auth-card {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+
+    #login-card {
+        width: 92%;
+        padding: 25px 20px;
+        margin: 15px auto;
+    }
+
+    #login-card h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .login-options {
+        font-size: 12px;
+    }
+
+    .divider-text {
+        margin: 20px 0;
+    }
+}
+
+
+
+@media (max-width: 380px) {
+
+    #login-card {
+        width: 94%;
+        padding: 20px 15px;
+    }
+
+    #login-card h1 {
+        font-size: 22px;
+    }
+
+    .login-options {
+        font-size: 11px;
+    }
+
+    .divider-text {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+}

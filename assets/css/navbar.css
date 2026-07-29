@@ -1,0 +1,283 @@
+:root {
+    --bg-color: #080808;
+    --border-color: #313035;
+    --primary-color: #5367FE;
+    --primary-dark: #3F4DBA;
+    --text-muted: #565A66;
+    --dropdown-bg: #181818;
+
+    --navbar-height: 80px;
+    --logo-height: 50px;
+    --border-radius: 5px;
+
+    --nav-padding: 0 80px;
+    --nav-item-gap: 25px;
+    --btn-padding: 10px;
+    --register-margin: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-custom {
+    background: var(--bg-color);
+    padding: 0 80px;
+    min-height: 80px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav img {
+    border-right: 2px solid var(--border-color);
+    height: var(--logo-height);
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .nav-list li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid var(--primary-dark);
+    color: var(--primary-dark);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dropdown .btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.dropdown .btn:hover,
+.dropdown .btn:focus {
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    background-color: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+    z-index: 1055;
+    margin-top: 0 !important;
+}
+
+.dropdown-item {
+    color: var(--text-color);
+    padding: 2px 16px !important;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#register-btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--btn-padding);
+    color: var(--text-color);
+    margin-left: var(--register-margin);
+}
+
+#signin-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-dark);
+}
+
+nav ul li.active {
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+@media (max-width:1200px) {
+
+    .navbar-custom {
+        padding: 0 30px;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    #register-btn {
+        margin-left: 10px;
+    }
+
+    .dropdown .btn {
+        font-size: 14px;
+    }
+
+    .nav-list li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:992px) {
+
+    .navbar-custom {
+        padding: 20px 40px;
+    }
+
+    .navbar-collapse {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-list {
+        gap: 18px;
+    }
+
+    #register-btn {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .dropdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    #signin-btn,
+    #register-btn {
+        width: 220px;
+        margin: 0;
+    }
+}
+
+@media (max-width:768px) {
+
+    .navbar-custom {
+        padding: 20px;
+    }
+
+    nav img {
+        border: none;
+    }
+
+    .navbar-collapse.show {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown,
+    .nav-buttons {
+        margin-top: 20px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    #signin-btn,
+    #register-btn {
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    #register-btn {
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width:480px) {
+
+    .nav-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #signin-btn,
+    #register-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .dropdown .btn {
+        width: 100%;
+    }
+
+}
