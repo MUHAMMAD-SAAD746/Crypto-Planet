@@ -1,0 +1,483 @@
+:root {
+    --bg-color: #080808;
+    --charcoal: #121318;
+    --primary-color: #5367FE;
+    --profit-text: #049E68;
+    --loss-text: #D52525;
+    --light-grey: #787A89;
+    --light-blue: #3671E9;
+    --cyan: #026DCF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    padding-top: 80px;
+}
+
+.start-tradingBtn {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#top-market {
+    padding-top: 60px;
+}
+
+.coin-card {
+    background-color: var(--charcoal);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.coin-card .coin-tag {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 2px 8px;
+
+}
+
+.coin-logo {
+    width: 35px;
+}
+
+
+
+
+
+
+
+
+.coin-header {
+    display: flex;
+    align-items: center;
+}
+
+.coin-info {
+    display: flex;
+    align-items: center;
+}
+
+.coin-info h4 {
+    margin: 0;
+}
+
+.coin-tag {
+    margin-left: 10px;
+}
+
+.profit {
+    color: var(--profit-text);
+}
+
+.loss {
+    color: var(--loss-text);
+}
+
+#get-started {
+    padding: 10px 82px;
+    background-color: var(--charcoal);
+}
+
+#get-started .col-6 {
+    display: flex;
+}
+
+#get-started .box {
+    width: 100%;
+}
+
+#get-started .start-tradingBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    padding: 0;
+}
+
+#btn-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+#btn-span ion-icon {
+    font-size: 14px;
+    color: #000;
+}
+
+.box {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 13px;
+}
+
+.box p {
+    font-size: 13px;
+}
+
+.mobile-download-image {
+    display: none;
+}
+
+#download-app img {
+    max-width: 100%;
+    height: auto;
+}
+
+#download-app .box {
+    background-color: var(--charcoal);
+    height: 100%;
+    transition: .3s;
+}
+
+#download-app .box:hover {
+    transform: translateY(-5px);
+}
+
+.description {
+    width: 50%;
+}
+
+.service-card {
+    background-color: var(--charcoal);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.service-card p {
+    font-size: 15px;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.icon-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+#investors {
+    background-color: var(--charcoal);
+    padding: 80px 140px;
+}
+
+#investors img {
+    max-width: 900px;
+    height: auto;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+#minning {
+    padding: 50px 80px;
+}
+
+
+#minning-container {
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+#minning-col1 p {
+    width: 75%;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+#minning-col2 input {
+    border: none;
+    border-bottom: 1px solid #ffffff69;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+#minning-col2 input::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+#minning-col2 button {
+    background-color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+}
+
+footer {
+    background-color: var(--charcoal);
+    padding: 40px;
+    color: #fff;
+    margin: 0;
+}
+
+footer p,
+footer li a {
+    color: var(--light-grey);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer p,
+footer ul {
+    margin-top: 40px;
+    padding-left: 0;
+}
+
+footer ul li {
+    line-height: 1.8;
+    list-style: none;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: var(--light-grey);
+}
+
+#footer-links p {
+    font-size: 14px;
+}
+
+.footer-os {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.footer-os div p {
+    margin: 0;
+    font-size: 10px;
+}
+
+
+@media (max-width: 634px) {
+
+    .coin-header {
+        align-items: flex-start;
+    }
+
+    .coin-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .coin-tag {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+}
+
+
+@media (max-width:991px) {
+
+    #download-app {
+        text-align: center;
+    }
+
+    #download-app .description {
+        width: 100%;
+    }
+
+    #download-app .col-lg-8 {
+        padding-left: 12px !important;
+        padding-right: 12px;
+        order: 1;
+    }
+
+    #download-app>.row>.col-lg-4 {
+        display: none;
+    }
+
+    .mobile-download-image {
+        display: block;
+        margin: 30px 0;
+    }
+
+    #minning {
+        padding: 50px 30px;
+    }
+
+    #minning-container {
+        padding: 30px;
+    }
+
+    #minning-col1 {
+        text-align: center;
+    }
+
+    #minning-col1 p {
+        width: 100%;
+    }
+
+    #minning-col2 {
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    .main-body {
+        padding: 0 20px;
+    }
+
+    #download-app {
+        padding: 60px 0;
+    }
+
+    #download-app .box {
+        padding: 20px;
+    }
+
+    section.services>p.w-50 {
+        width: 90% !important;
+    }
+
+    #minning {
+        padding: 40px 15px;
+    }
+
+    #minning-container {
+        padding: 25px 20px;
+    }
+
+    #minning-col1 h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    #minning-col1 p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #minning-col2 {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    #minning-col2 input {
+        width: 100%;
+        margin-right: 0 !important;
+        padding-bottom: 10px;
+    }
+
+    #minning-col2 button {
+        width: 100%;
+        margin-right: 0 !important;
+        padding: 12px;
+    }
+}
+
+
+@media (max-width:576px) {
+
+    .main-body {
+        padding: 0 15px;
+    }
+
+    #top-market .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    #get-started {
+        padding: 10px 20px;
+    }
+
+    #get-started .col-12 {
+        margin-top: 20px !important;
+    }
+
+    #download-app h2 {
+        font-size: 30px;
+    }
+
+    #download-app .description {
+        font-size: 15px;
+    }
+
+    #download-app .box {
+        padding: 18px 10px;
+    }
+
+    #download-app .card-heading {
+        font-size: 16px !important;
+    }
+
+    #download-app ion-icon {
+        font-size: 30px !important;
+    }
+
+    #investors {
+        padding: 50px 50px;
+    }
+
+    #investors .d-flex {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #minning {
+        padding: 30px 10px;
+    }
+
+    #minning-container {
+        padding: 20px 15px;
+    }
+
+    #minning-col1 h3 {
+        font-size: 22px;
+    }
+
+    #minning-col1 p {
+        font-size: 14px;
+    }
+
+    #minning-col2 button {
+        font-size: 15px;
+    }
+}

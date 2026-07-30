@@ -26,6 +26,13 @@
     color: var(--cyan);
 }
 
+.text-profit {
+    color: var(--profit-text);
+}
+
+.text-loss {
+    color: var(--loss-text);
+}
 
 .main-body {
     padding-left: 120px;
@@ -57,11 +64,16 @@
     color: var(--light-grey);
 }
 
+.dropdown-menu .dropdown-item {
+    color: #fff;
+}
+
 .date-picker {
     position: relative;
     display: flex;
     align-items: center;
     color: var(--light-grey);
+    width: 130px;
 }
 
 .date-picker input::-webkit-calendar-picker-indicator {
@@ -69,9 +81,9 @@
     cursor: pointer;
 }
 
-.date-picker input {
-    padding-left: 38px;
-    width: 170px;
+.date-picker input#date.form-control {
+    padding: 0;
+    width: 100%;
     background-color: transparent;
     border: none;
     color: var(--light-grey);
@@ -110,15 +122,14 @@
     font-weight: 500;
 }
 
-.coin-price {
+.market-price {
     color: #fff;
     font-size: 16px !important;
     font-weight: 600;
     margin-top: 18px !important;
 }
 
-.coin-price span {
-    color: var(--profit-text);
+.market-price span {
     font-size: 11px;
     font-weight: 500;
     display: flex;
@@ -126,7 +137,7 @@
     /* gap: 2px; */
 }
 
-.coin-price ion-icon {
+.market-price ion-icon {
     font-size: 11px;
 }
 
@@ -149,6 +160,369 @@
     display: none;
 }
 
+/* market styling below  */
+.market-main {
+    background-color: var(--charcoal);
+    color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.market-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 15px;
+}
+
+/* Left group */
+.market-categories {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Each individual category */
+.market-category {
+    border: 1px solid var(--light-grey);
+    padding: 8px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Search on right */
+.market-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--light-grey);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.market-search ion-icon {
+    font-size: 18px;
+}
+
+.market-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.market-search .settings-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.market-search input::placeholder {
+    color: var(--light-grey);
+}
+
+
+
+
+
+
+
+
+
+.filter-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 13px;
+    color: var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.filter-categories ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-categories li {
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+.filter-categories li ion-icon {
+    font-size: 13px;
+}
+
+.filter-categories li.active,
+.filter-categories li:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* Show 20 coins */
+
+.coin-count select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.coin-count select option {
+    background-color: var(--charcoal);
+    color: var(--light-grey);
+}
+
+
+/* =========================
+   VIEW OPTIONS
+========================= */
+
+.view-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-options ion-icon {
+    font-size: 20px;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.view-options ion-icon:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   CUSTOMIZE
+========================= */
+
+.customize-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.customize-option p {
+    margin: 0;
+}
+
+.customize-option ion-icon {
+    font-size: 18px;
+}
+
+.customize-option:hover,
+.clear-filter:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   CLEAR FILTER
+========================= */
+
+.clear-filter {
+    margin: 0;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.market-table-header {
+    color: var(--light-grey);
+    font-size: 13px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.market-table-header>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.market-table-header ion-icon {
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.market-table-header>div:hover,
+.market-table-header>div:hover ion-icon {
+    color: var(--primary-color);
+}
+
+.market-table-header .chart-column {
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.market-table-row {
+    color: #fff;
+    font-size: 13px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(120, 122, 137, 0.25);
+}
+
+/* Every column */
+.market-table-row>div {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+}
+
+/* Make text vertically centered */
+.market-table-row span {
+    line-height: 1;
+}
+
+/* Rank */
+.coin-rank {
+    gap: 8px;
+    color: var(--light-grey);
+}
+
+/* Coin */
+.coin-name {
+    gap: 10px;
+}
+
+.coin-logo {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.coin-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.coin-title {
+    color: #fff;
+    font-weight: 500;
+}
+
+.coin-tag {
+    background-color: var(--bg-color);
+    color: var(--light-blue);
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* Price */
+.market-price {
+    color: #fff;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Percentage */
+.coin-change {
+    font-weight: 500;
+}
+
+/* High / Low */
+.coin-high,
+.coin-low {
+    color: #fff;
+}
+
+/* Chart */
+.chart-column {
+    justify-content: center;
+}
+
+.chart-image {
+    width: 80px;
+    height: 35px;
+}
+
+.chart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Keep Price heading and Price value perfectly aligned */
+.market-table-header .price-column,
+.market-table-row .market-price {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Same horizontal starting point */
+.market-table-header .price-column,
+.market-table-row .market-price {
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 991px) {
 
     .main-body {
@@ -169,8 +543,74 @@
     }
 
     .header-controls {
-        justify-content: flex-start;
-        margin-top: 20px;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .header-controls .dropdown {
+        width: fit-content;
+        flex: 0 0 auto;
+    }
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    .filter-btn {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hide Filter text */
+    .filter-btn .filter-text {
+        display: none;
+    }
+
+    /* Hide Bootstrap dropdown arrow */
+    .filter-btn::after {
+        display: none;
+    }
+
+    .filter-btn ion-icon {
+        font-size: 18px;
+        margin: 0;
+    }
+
+
+    /* =========================
+       DATE
+    ========================= */
+
+    .date-picker {
+        position: relative;
+        width: 20px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date-picker input#date.form-control {
+        width: 100%;
+        height: 32px;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .calendar-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--light-grey);
+        font-size: 18px;
+        pointer-events: none;
     }
 
     /* Coin cards */
@@ -180,7 +620,6 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
-
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
@@ -189,14 +628,13 @@
         display: none;
     }
 
-    .coin-slider > .col-md-3 {
+    .coin-slider>.col-md-3 {
         flex: 0 0 auto;
-        width: auto;
+        width: 80%;
         scroll-snap-align: start;
     }
 
     /* Pagination */
-
     .coin-pagination {
         display: flex;
         justify-content: center;
@@ -213,7 +651,355 @@
     }
 
     .pagination-dot.active {
-        background-color: #454754;
+        background-color: var(--primary-color);
         transform: scale(1.2);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MEDIUM SCREEN
+   Toolbar stays visible + scrollable
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .market-toolbar {
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+
+        gap: 20px;
+    }
+
+    .market-toolbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Keep categories in one row */
+    .market-categories {
+        flex: 0 0 auto;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        width: max-content;
+
+        gap: 10px;
+    }
+
+    .market-category {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    /* Keep search visible as one unit */
+    .market-search {
+        flex: 0 0 auto;
+        width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MOBILE MARKET TABLE
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* =========================
+       MARKET TOOLBAR
+    ========================= */
+
+    .market-toolbar {
+        display: none;
+    }
+
+    .market-main {
+        padding: 12px;
+    }
+
+
+    /* =========================
+       FILTER PANEL
+    ========================= */
+
+    .filter-panel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+        padding: 15px 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+    }
+
+    .filter-panel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-categories {
+        flex: 0 0 auto;
+        width: auto;
+        overflow: visible;
+    }
+
+    .filter-categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-categories ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 25px;
+        width: max-content;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .filter-categories li {
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .filter-controls {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: max-content;
+        overflow: visible;
+    }
+
+    .filter-controls::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-controls > * {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       HEADER
+       # | Coin Name | Coin Price
+    ========================= */
+
+    .market-table-header {
+        display: grid;
+        grid-template-columns: 15% 50% 35%;
+
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    /* Hide 24%, High, Low, Chart */
+
+    .market-table-header>div:nth-child(4),
+    .market-table-header>div:nth-child(5),
+    .market-table-header>div:nth-child(6),
+    .market-table-header>div:nth-child(7) {
+        display: none;
+    }
+
+    .market-table-header>div {
+        width: auto;
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    /* =========================
+       ROW
+       # | Coin | Price
+    ========================= */
+
+    .market-table-row {
+        display: grid;
+        grid-template-columns: 15% 50% 35%;
+        width: 100%;
+        padding: 14px 0;
+        position: relative;
+    }
+
+
+    /* Hide High, Low, Chart */
+
+    .market-table-row>div:nth-child(5),
+    .market-table-row>div:nth-child(6),
+    .market-table-row>div:nth-child(7) {
+        display: none;
+    }
+
+    .market-table-row>div {
+        width: auto;
+        max-width: none;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    /* =========================
+       RANK
+    ========================= */
+
+    .coin-rank {
+        grid-column: 1;
+        grid-row: 1;
+
+        gap: 6px;
+        align-items: center;
+    }
+
+
+    /* =========================
+       COIN NAME
+    ========================= */
+
+    .coin-name {
+        grid-column: 2;
+        grid-row: 1;
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .coin-logo {
+        display: none;
+    }
+
+    .coin-title {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .coin-tag {
+        font-size: 10px;
+        padding: 2px 5px;
+        line-height: 1.2;
+    }
+
+
+    /* =========================
+       PRICE
+    ========================= */
+
+    .market-table-row .market-price {
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .market-table-row .market-price span {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+
+    /* =========================
+       PROFIT / LOSS
+    ========================= */
+
+    .market-table-row .coin-change {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    padding: 30px 0 0 0 !important;
+    margin: 0 !important;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+
+    /* =========================
+       PROFIT / LOSS COLORS
+    ========================= */
+
+    .text-profit {
+        color: var(--profit-text);
+    }
+
+    .text-loss {
+        color: var(--loss-text);
+    }
+
 }

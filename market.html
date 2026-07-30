@@ -20,38 +20,29 @@
 
     <div class="main-body" id="header">
         <header class="container-fluid">
-            <div class="row">
-                <div class="col-md-7">
+            <div class="row g-2">
+                <div class="col-10 col-md-7">
                     <h1>Crypto Currency Prices by Market Cap</h1>
                     <p class="text-light-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore laborum
                         illo necessitatibus
                         ipsum delectus vel beatae, quod eum odit. Sapiente cumque sit similique rerum veritatis est, at
                         vel.</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-2 col-md-5">
                     <div class="header-controls">
 
                         <!-- Filter Dropdown -->
                         <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            <button class="btn btn-outline-secondary dropdown-toggle filter-btn" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
 
                                 <ion-icon name="funnel-outline"></ion-icon>
-                                Filter
+                                <span class="filter-text">Filter</span>
                             </button>
 
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">Market Cap</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Price</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">24h Change</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Volume</a>
+                                    <a class="dropdown-item" href="#">Select</a>
                                 </li>
                             </ul>
                         </div>
@@ -67,8 +58,6 @@
             </div>
 
             <div class="row g-3 coin-slider" id="coinSlider">
-
-                <!-- Ethereum -->
                 <div class="col-md-3">
                     <div class="coin-info">
                         <div class="row align-items-center">
@@ -82,10 +71,10 @@
                                     <p class="mb-0">Ethereum</p>
                                 </div>
 
-                                <p class="coin-price d-flex align-items-center mb-0 mt-3">
+                                <p class="market-price d-flex align-items-center mb-0 mt-3">
                                     $38,400.54
 
-                                    <span class="ms-2">
+                                    <span class="ms-2 text-profit">
                                         +7.0%
                                         <ion-icon name="arrow-up-outline"></ion-icon>
                                     </span>
@@ -111,16 +100,16 @@
                             <div class="col-7">
                                 <div class="d-flex align-items-center gap-2">
                                     <div class="coin-logo">
-                                        <img src="./assets/images/Ethereum_Logo.png" alt="Ethereum">
+                                        <img src="./assets/images/Bitcoin.webp" alt="Ethereum">
                                     </div>
 
-                                    <p class="mb-0">Ethereum</p>
+                                    <p class="mb-0">Bitcoin</p>
                                 </div>
 
-                                <p class="coin-price d-flex align-items-center mb-0 mt-3">
+                                <p class="market-price d-flex align-items-center mb-0 mt-3">
                                     $38,400.54
 
-                                    <span class="ms-2">
+                                    <span class="ms-2 text-profit">
                                         +7.0%
                                         <ion-icon name="arrow-up-outline"></ion-icon>
                                     </span>
@@ -146,16 +135,16 @@
                             <div class="col-7">
                                 <div class="d-flex align-items-center gap-2">
                                     <div class="coin-logo">
-                                        <img src="./assets/images/Ethereum_Logo.png" alt="Ethereum">
+                                        <img src="./assets/images/bnb-tss7lyzvhxyjfc9ivae0l.webp" alt="Ethereum">
                                     </div>
 
-                                    <p class="mb-0">Ethereum</p>
+                                    <p class="mb-0">Binance</p>
                                 </div>
 
-                                <p class="coin-price d-flex align-items-center mb-0 mt-3">
+                                <p class="market-price d-flex align-items-center mb-0 mt-3">
                                     $38,400.54
 
-                                    <span class="ms-2">
+                                    <span class="ms-2 text-profit">
                                         +7.0%
                                         <ion-icon name="arrow-up-outline"></ion-icon>
                                     </span>
@@ -181,16 +170,16 @@
                             <div class="col-7">
                                 <div class="d-flex align-items-center gap-2">
                                     <div class="coin-logo">
-                                        <img src="./assets/images/Ethereum_Logo.png" alt="Ethereum">
+                                        <img src="./assets/images/xrp.webp" alt="Ethereum">
                                     </div>
 
-                                    <p class="mb-0">Ethereum</p>
+                                    <p class="mb-0">XRP</p>
                                 </div>
 
-                                <p class="coin-price d-flex align-items-center mb-0 mt-3">
+                                <p class="market-price d-flex align-items-center mb-0 mt-3">
                                     $38,400.54
 
-                                    <span class="ms-2">
+                                    <span class="ms-2 text-profit">
                                         +7.0%
                                         <ion-icon name="arrow-up-outline"></ion-icon>
                                     </span>
@@ -210,12 +199,970 @@
             </div>
 
             <div class="coin-pagination" id="coinPagination">
-                <span class="pagination-dot active"></span>
-                <span class="pagination-dot"></span>
-                <span class="pagination-dot"></span>
-                <span class="pagination-dot"></span>
+                <span class="pagination-dot active" data-index="0"></span>
+                <span class="pagination-dot" data-index="1"></span>
+                <span class="pagination-dot" data-index="2"></span>
+                <span class="pagination-dot" data-index="3"></span>
             </div>
         </header>
+
+
+        <main class="container-fluid market-main mt-4">
+            <div class="market-toolbar">
+                <!-- Left: Market Categories -->
+                <div class="market-categories">
+                    <div class="market-category">Top Gainer</div>
+                    <div class="market-category">Top Loser</div>
+                    <div class="market-category">New in Market</div>
+                    <div class="market-category">Top in Trending</div>
+                    <div class="market-category">Top in Volume</div>
+                </div>
+
+                <!-- Right: Search -->
+                <div class="market-search">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Search Coin Name">
+                    <ion-icon name="options-outline" class="settings-icon"></ion-icon>
+                </div>
+            </div>
+
+
+            <div class="filter-panel">
+                <div class="filter-categories">
+                    <ul>
+                        <li class="active">
+                            Category
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li>
+                            Algorithm
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li>
+                            Platform
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li>
+                            Industry
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-controls">
+                    <div class="coin-count">
+                        <select>
+                            <option value="20">Show 20 coins</option>
+                            <option value="30">Show 30 coins</option>
+                            <option value="50">Show 50 coins</option>
+                            <option value="100">Show 100 coins</option>
+                        </select>
+                    </div>
+
+                    <div class="view-options">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <ion-icon name="grid-outline"></ion-icon>
+                    </div>
+
+                    <div class="customize-option">
+                        <ion-icon name="add-outline"></ion-icon>
+                        <p>Customize</p>
+                    </div>
+
+                    <p class="clear-filter">Clear Filter</p>
+                </div>
+            </div>
+
+
+            <div class="row market-table-header">
+                <div class="col-md-1">
+                    <span>#</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-3">
+                    <span>Coin Name</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-2 price-column">
+                    <span>Coin Price</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-1">
+                    <span>24%</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-2">
+                    <span>24h High Price</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-2">
+                    <span>24h Low Price</span>
+                    <ion-icon name="caret-up-outline"></ion-icon>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <span>Chart</span>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>1</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/Bitcoin.webp" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Bitcoin</span>
+                    <span class="coin-tag">BTC</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$43,975.71</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+0.60%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$44,727.80</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$43,318.64</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>2</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/Ethereum_Logo.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Ethereum</span>
+                    <span class="coin-tag">ETH</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$43,975.71</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-2.79%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$44,727.80</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$43,318.64</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>3</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/xrp.webp" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">XRP</span>
+                    <span class="coin-tag">XRP</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$0.8721</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.40%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$0.9091</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$0.8484</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>4</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/polygon.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Polygon</span>
+                    <span class="coin-tag">MATIC</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$1.98</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+2.46%%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$2.06</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$1.91</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>5</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/usdc.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">United States Dollar</span>
+                    <span class="coin-tag">USDC</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$42164.54</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+7.76%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$42164.54</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$42164.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>6</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/solona.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Solana</span>
+                    <span class="coin-tag">SOL</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$112.13</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.06%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$$118.13</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$111.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>7</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/cardano.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Cardano</span>
+                    <span class="coin-tag">ADA</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$112.13</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-loss">
+                    <span>+1.06%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$$118.13</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$111.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>8</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/tether.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Tether</span>
+                    <span class="coin-tag">USDT</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$112.13</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.06%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$$118.13</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$111.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>9</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/avalanche.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Avalanche</span>
+                    <span class="coin-tag">AVAX</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$112.13</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.06%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$$118.13</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$111.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <!-- Rank -->
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>10</span>
+                </div>
+
+                <!-- Coin -->
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/polkadot.png" alt="Ethereum">
+                    </div>
+
+                    <span class="coin-title">Polkadot</span>
+                    <span class="coin-tag">DOT</span>
+                </div>
+
+                <!-- Price -->
+                <div class="col-md-2 market-price">
+                    <span>$112.13</span>
+                </div>
+
+                <!-- 24h Change -->
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-1.06%</span>
+                </div>
+
+                <!-- High -->
+                <div class="col-md-2 coin-high">
+                    <span>$$118.13</span>
+                </div>
+
+                <!-- Low -->
+                <div class="col-md-2 coin-low">
+                    <span>$111.54</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>11</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/bitcoincash.png" alt="Bitcoin Cash">
+                    </div>
+                    <span class="coin-title">Bitcoin Cash</span>
+                    <span class="coin-tag">BCH</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$482.31</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.32%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$491.42</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$473.18</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Bitcoin Cash chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>12</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/chain link.png" alt="Chainlink">
+                    </div>
+                    <span class="coin-title">Chainlink</span>
+                    <span class="coin-tag">LINK</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$18.42</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-0.84%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$19.07</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$17.91</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Chainlink chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>13</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/litecoin.png" alt="Litecoin">
+                    </div>
+                    <span class="coin-title">Litecoin</span>
+                    <span class="coin-tag">LTC</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$96.24</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+2.14%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$98.31</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$94.76</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Litecoin chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>14</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/uniswap.png" alt="Uniswap">
+                    </div>
+                    <span class="coin-title">Uniswap</span>
+                    <span class="coin-tag">UNI</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$8.72</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.87%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$8.94</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$8.51</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Uniswap chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>15</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/cosmos.png" alt="Cosmos">
+                    </div>
+                    <span class="coin-title">Cosmos</span>
+                    <span class="coin-tag">ATOM</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$7.91</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-1.26%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$8.13</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$7.74</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Cosmos chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>16</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/near.png" alt="NEAR Protocol">
+                    </div>
+                    <span class="coin-title">NEAR Protocol</span>
+                    <span class="coin-tag">NEAR</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$5.42</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+3.06%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$5.61</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$5.18</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="NEAR Protocol chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>17</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/stellar.png" alt="Stellar">
+                    </div>
+                    <span class="coin-title">Stellar</span>
+                    <span class="coin-tag">XLM</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$0.1184</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+0.92%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$0.1212</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$0.1158</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Stellar chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>18</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/dogecoin.png" alt="Dogecoin">
+                    </div>
+                    <span class="coin-title">Dogecoin</span>
+                    <span class="coin-tag">DOGE</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$0.1642</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-2.18%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$0.1697</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$0.1608</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Dogecoin chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>19</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/algorand.png" alt="Algorand">
+                    </div>
+                    <span class="coin-title">Algorand</span>
+                    <span class="coin-tag">ALGO</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$0.2471</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-profit">
+                    <span>+1.46%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$0.2534</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$0.2418</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Algorand chart">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row market-table-row">
+                <div class="col-md-1 coin-rank">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span>20</span>
+                </div>
+
+                <div class="col-md-3 coin-name">
+                    <div class="coin-logo">
+                        <img src="./assets/images/tron.png" alt="Tezos">
+                    </div>
+                    <span class="coin-title">Tron</span>
+                    <span class="coin-tag">TRX</span>
+                </div>
+
+                <div class="col-md-2 market-price">
+                    <span>$0.7812</span>
+                </div>
+
+                <div class="col-md-1 coin-change text-loss">
+                    <span>-0.73%</span>
+                </div>
+
+                <div class="col-md-2 coin-high">
+                    <span>$0.8014</span>
+                </div>
+
+                <div class="col-md-2 coin-low">
+                    <span>$0.7629</span>
+                </div>
+
+                <div class="col-md-1 chart-column">
+                    <div class="chart-image">
+                        <img src="./assets/images/charcoal-graph.PNG" alt="Tezos chart">
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
 
@@ -235,6 +1182,31 @@
 
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+        const coinSlider = document.getElementById("coinSlider");
+        const dots = document.querySelectorAll(".pagination-dot");
+        const cards = document.querySelectorAll(".coin-slider > div");
+
+        coinSlider.addEventListener("scroll", () => {
+            const scrollLeft = coinSlider.scrollLeft;
+
+            let activeIndex = 0;
+
+            cards.forEach((card, index) => {
+                const cardLeft = card.offsetLeft;
+
+                if (scrollLeft >= cardLeft - 130) {
+                    activeIndex = index;
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === activeIndex);
+            });
+        });
+    </script>
 </body>
 
 </html>

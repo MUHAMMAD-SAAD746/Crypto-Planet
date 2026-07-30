@@ -1,4 +1,6 @@
 function loadNavbar() {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
     return `
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
@@ -18,10 +20,21 @@ function loadNavbar() {
                 <div class="collapse navbar-collapse" id="navbarContent">
 
                     <ul class="nav-list mx-auto">
-                        <li><a href="#">Market</a></li>
-                        <li><a href="#">Watchlist</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Learn</a></li>
+                        <li class="${currentPage === "index.html" ? "active" : ""}">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="${currentPage === "market.html" ? "active" : ""}">
+                            <a href="./market.html">Market</a>
+                        </li>
+                        <li class="${currentPage === "watchlist.html" ? "active" : ""}">
+                            <a href="#">Watchlist</a>
+                        </li>
+                        <li class="${currentPage === "portfolio.html" ? "active" : ""}">
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li class="${currentPage === "learn.html" ? "active" : ""}">
+                            <a href="#">Learn</a>
+                        </li>
                     </ul>
 
                     <div class="dropdown ms-lg-4">
