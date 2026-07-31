@@ -3,7 +3,7 @@ function loadNavbar() {
 
     return `
         <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container">
+            <div class="container-fluid">
                 <!-- Logo -->
                 <div>
                     <img class="desktop-logo" src="./assets/images/logo.PNG" alt="Logo">

@@ -271,7 +271,7 @@ nav ul li.active {
     }
 
     /* Keep logo + toggle above pseudo element */
-    .navbar-custom>.container {
+    .navbar-custom>.container-fluid {
         position: relative;
         z-index: 1;
     }

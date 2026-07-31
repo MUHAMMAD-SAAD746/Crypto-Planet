@@ -4,10 +4,6 @@
     --primary-color: #5367FE;
 }
 
-body {
-    background-color: red;
-}
-
 .text-primary-color {
     color: var(--primary-color);
 }
@@ -216,6 +212,10 @@ body {
 }
 
 @media (max-width: 576px) {
+
+    body {
+        padding-top: 30px;
+    }
 
     #card {
         width: 92%;

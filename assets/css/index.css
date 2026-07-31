@@ -16,6 +16,8 @@
 
 #banner {
     padding-top: 80px;
+
+    padding-bottom: 40px !important;
 }
 
 .start-tradingBtn {
@@ -292,6 +294,26 @@ footer ul li {
 }
 
 
+.coin-pagination {
+    display: none;
+}
+
+.pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+    width: 22px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+
 @media (max-width: 634px) {
 
     .coin-header {
@@ -312,6 +334,64 @@ footer ul li {
 
 
 @media (max-width:991px) {
+    #header header .row {
+        align-items: center;
+    }
+
+    #header header .col-md-6:last-child {
+        display: flex;
+        align-items: center;
+    }
+
+    #header header .col-md-6:last-child img {
+        width: 100% !important;
+        height: auto;
+        display: block;
+    }
+
+    #top-market .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px !important;
+        margin-left: 0;
+        margin-right: 0;
+        scroll-behavior: smooth;
+    }
+
+    #top-market .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #top-market .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    #top-market .row>[class*="col-"] {
+        flex: 0 0 80%;
+        max-width: 80%;
+        width: 80%;
+        padding-left: 0;
+        padding-right: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Pagination */
+    .coin-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    #get-started {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     #download-app {
         text-align: center;
@@ -422,6 +502,19 @@ footer ul li {
     #top-market .container-fluid {
         padding-left: 10px !important;
         padding-right: 10px !important;
+    }
+
+    #top-market .row {
+        gap: 12px !important;
+    }
+
+    #top-market .row>[class*="col-"] {
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+
+    .coin-pagination {
+        margin-top: 18px;
     }
 
     #get-started {
