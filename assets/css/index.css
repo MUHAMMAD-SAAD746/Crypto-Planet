@@ -37,6 +37,19 @@
     background-color: var(--charcoal);
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coin-card>div {
+    width: 100%;
+}
+
+.coin-card>div:last-child img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .coin-card .coin-tag {
@@ -50,13 +63,6 @@
 .coin-logo {
     width: 35px;
 }
-
-
-
-
-
-
-
 
 .coin-header {
     display: flex;
@@ -187,9 +193,17 @@
     padding: 80px 140px;
 }
 
+#investors .row > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #investors img {
-    max-width: 900px;
-    height: auto;
+    width: 100%;
+    max-width: 140px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .divider {
@@ -333,6 +347,33 @@ footer ul li {
 }
 
 
+@media (max-width: 1199px) {
+    #top-market .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px !important;
+        margin-left: 0;
+        margin-right: 0;
+        scroll-behavior: smooth;
+    }
+
+    #top-market .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    #top-market .row > [class*="col-"] {
+        flex: 1 1 0;
+        min-width: 250px;
+        padding-left: 0;
+        padding-right: 0;
+        scroll-snap-align: start;
+    }
+}
+
+
 @media (max-width:991px) {
     #header header .row {
         align-items: center;
@@ -349,34 +390,29 @@ footer ul li {
         display: block;
     }
 
-    #top-market .row {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        gap: 16px !important;
-        margin-left: 0;
-        margin-right: 0;
-        scroll-behavior: smooth;
-    }
-
     #top-market .container-fluid {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    #top-market .row::-webkit-scrollbar {
-        display: none;
+    #top-market .row>[class*="col-"] {
+        flex: 0 0 53%;
+        max-width: 53%;
+        width: 53%;
     }
 
-    #top-market .row>[class*="col-"] {
-        flex: 0 0 80%;
-        max-width: 80%;
-        width: 80%;
-        padding-left: 0;
-        padding-right: 0;
-        scroll-snap-align: start;
+    .coin-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .coin-card>div {
+        width: 50%;
+    }
+
+    .coin-card>div:last-child img {
+        width: 100%;
     }
 
     /* Pagination */
@@ -441,6 +477,12 @@ footer ul li {
 
     .main-body {
         padding: 0 20px;
+    }
+
+    #top-market .row>[class*="col-"] {
+        flex: 0 0 70%;
+        max-width: 70%;
+        width: 70%;
     }
 
     #download-app {
@@ -511,6 +553,28 @@ footer ul li {
     #top-market .row>[class*="col-"] {
         flex: 0 0 85%;
         max-width: 85%;
+    }
+
+    .coin-info h4 {
+        font-size: 16px;
+    }
+
+    .coin-tag {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .coin-price {
+        font-size: 12px;
+    }
+
+    .profit,
+    .loss {
+        font-size: 11px;
+    }
+
+    .coin-price-row {
+        gap: 6px;
     }
 
     .coin-pagination {
