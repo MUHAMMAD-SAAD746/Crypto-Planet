@@ -74,12 +74,9 @@ footer ul li {
 }
 
 .copyright-links {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
-    margin-top: 20px;
+    gap: 15px;
 }
 
 #copyright .copyright-links a {
