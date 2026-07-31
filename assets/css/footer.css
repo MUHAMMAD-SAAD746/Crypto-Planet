@@ -33,6 +33,18 @@ footer {
     margin: 0;
 }
 
+.mobile-icons {
+    display: none;
+}
+
+.desktop-icons {
+    display: flex;
+}
+
+.newsletter-section {
+    display: none;
+}
+
 footer p,
 footer li a {
     color: var(--light-grey);
@@ -51,13 +63,36 @@ footer ul li {
     list-style: none;
 }
 
-#copyright a {
-    text-decoration: none;
-    color: var(--light-grey);
+.copyright-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-#footer-links p {
+.copyright-text p {
+    margin: 0;
+}
+
+.copyright-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 20px;
+}
+
+#copyright .copyright-links a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: var(--light-grey);
     font-size: 14px;
+}
+
+#copyright .copyright-links span {
+    flex: 0 0 auto;
+    color: #3f414b96;
 }
 
 .footer-os {
@@ -71,4 +106,184 @@ footer ul li {
 .footer-os div p {
     margin: 0;
     font-size: 10px;
+}
+
+.social-icons {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+
+    #footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Hide paragraph */
+    #footer-container>p {
+        display: none;
+    }
+
+    /* Logo */
+    #footer-container>img {
+        width: 120px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    /* Hide 5 social icons */
+    .desktop-icons {
+        display: none;
+    }
+
+    /* Show 4 mobile icons */
+    .mobile-icons {
+        display: flex;
+        flex-wrap: nowrap;
+        width: auto;
+        margin: 0;
+        margin-left: auto !important;
+        gap: 10px;
+    }
+
+    .mobile-icons>div {
+        background-color: var(--bg-color);
+        padding: 6px;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-icons ion-icon {
+        font-size: 17px;
+    }
+
+    .learn-column {
+        display: none;
+    }
+
+    .newsletter-section {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .newsletter-section h4 {
+        margin-bottom: 15px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 12px;
+        background-color: transparent;
+        border: 1px solid var(--light-grey);
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    .newsletter-form input:focus {
+        border-color: var(--primary-color);
+    }
+
+    .newsletter-form button {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .newsletter-section>p {
+        margin: 15px 0;
+    }
+
+    .payment-methods {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .payment-method {
+        flex: 1;
+        height: 45px;
+        background-color: var(--bg-color);
+        border-radius: 6px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .payment-method ion-icon {
+        font-size: 25px;
+    }
+
+    #copyright {
+        width: 100%;
+    }
+
+    #copyright>.d-flex:last-child {
+        display: none !important;
+    }
+
+    #copyright .copyright-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #copyright .copyright-text p {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    #copyright .copyright-links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+        padding: 0 5px;
+    }
+
+    footer .social-icons {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    #footer-container>img {
+        width: 100px;
+    }
+
+    .mobile-icons {
+        gap: 7px;
+    }
+
+    .mobile-icons ion-icon {
+        font-size: 18px;
+    }
 }
