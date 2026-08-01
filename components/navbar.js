@@ -7,7 +7,7 @@ function loadNavbar() {
                 <!-- Logo -->
                 <div>
                     <img class="desktop-logo" src="./assets/images/logo.PNG" alt="Logo">
-                    <img class="mobile-logo" src="./assets/images/charcoal-logo.png" alt="Logo">
+                    <img class="mobile-logo" src="./assets/images/charcoal-logo.PNG" alt="Logo">
                 </div>
 
 
