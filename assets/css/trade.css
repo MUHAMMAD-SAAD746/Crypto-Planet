@@ -1,0 +1,708 @@
+:root {
+    --bg-color: #080808;
+    --charcoal: #121318;
+    --primary-color: #5367FE;
+    --profit-text: #049E68;
+    --loss-text: #D52525;
+    --light-grey: #787A89;
+    --light-blue: #3671E9;
+    --cyan: #026DCF;
+}
+
+.main-body {
+    padding-bottom: 20px;
+}
+
+.main-body .market-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+/* ---------- Coin Header ---------- */
+.coin-header {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    /* was 18px */
+}
+
+.coin-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.coin-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.coin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.coin-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.coin-name p {
+    margin: 0;
+}
+
+.coin-name p:first-child {
+    font-size: 32px;
+    color: #fff;
+}
+
+.coin-tag {
+    padding: 3px 12px;
+    background: var(--bg-color);
+    border-radius: 5px;
+    color: var(--light-blue);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.favorite-btn {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.favorite-btn ion-icon {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.coin-meta {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.coin-meta p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.coin-meta p:nth-child(1) {
+    background: var(--bg-color);
+    color: var(--light-grey);
+    padding: 4px 4px 4px 6px;
+    border-radius: 5px;
+    min-width: 65px;
+}
+
+.coin-meta p:nth-child(2) {
+    color: var(--light-grey);
+}
+
+.coin-meta p:nth-child(3) {
+    color: var(--light-grey);
+}
+
+
+/* ===========================
+   Price Card
+=========================== */
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Top */
+
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-value {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.price-value h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.price-value p {
+    margin: 0;
+    color: var(--profit-text);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.price-value ion-icon {
+    font-size: 18px;
+}
+
+.price-label {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.price-label p {
+    margin: 0;
+    color: var(--light-grey);
+    font-size: 13px;
+}
+
+.price-label ion-icon {
+    color: var(--light-grey);
+    font-size: 18px;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* High / Low Header */
+
+.price-range-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--light-grey);
+}
+
+.range-title p {
+    margin: 0;
+    /* color: var(--light-grey); */
+}
+
+.range-title ion-icon {
+    /* color: var(--primary-color); */
+    font-size: 20px;
+}
+
+.range-filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-color);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.range-filter p {
+    margin: 0;
+    color: var(--light-grey);
+    font-size: 14px;
+}
+
+.range-filter ion-icon {
+    color: var(--light-grey);
+    font-size: 16px;
+}
+
+/* Progress */
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 65%;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+/* Footer */
+
+.price-range-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-range-footer p {
+    margin: 0;
+    color: var(--light-grey);
+    font-size: 14px;
+}
+
+/* ==========================
+   Stats Section
+========================== */
+
+.stats-row {
+    margin-top: 40px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.stat-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 15px;
+    color: var(--light-grey);
+    font-size: 15px;
+}
+
+.stat-title ion-icon {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.stat-value {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    /* font-weight: 700; */
+}
+
+.stat-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    color: var(--profit-text);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stat-change ion-icon {
+    font-size: 16px;
+}
+
+.stats-row .col-md-6>.row {
+    row-gap: 30px;
+}
+
+/* ==========================
+   Trade Card
+========================== */
+
+.trade-card {
+    background: var(--charcoal);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Tabs */
+
+.trade-tabs {
+    display: flex;
+    border-bottom: 1px solid #fff;
+}
+
+.trade-tab {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: none;
+    color: var(--light-grey);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+.trade-tab.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: -1px;
+}
+
+/* Order Types */
+
+.order-types {
+    display: flex;
+    gap: 12px;
+}
+
+.order-type {
+    flex: 1;
+    cursor: pointer;
+}
+
+.order-type input {
+    display: none;
+}
+
+.order-type span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+    background: var(--charcoal);
+    color: var(--light-grey);
+}
+
+.order-type.active span {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border-color: transparent;
+}
+
+/* Wallet */
+
+.wallet-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wallet-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.wallet-item img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Input Groups */
+
+.trade-input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.trade-input {
+    width: 100%;
+}
+
+/* .trade-input label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--light-grey);
+    font-size: 14px;
+} */
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+    background: var(--charcoal);
+    overflow: hidden;
+}
+
+.input-label {
+    padding: 10px 14px 4px;
+    margin: 0;
+    color: var(--light-grey);
+    font-size: 13px;
+}
+
+.input-content {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding-bottom: 4px;
+}
+
+/* .input-box span {
+    padding: 0 4px;
+    color: #fff;
+
+} */
+
+.input-prefix {
+    padding: 0 0 0 14px;
+    color: #fff;
+}
+
+.input-content input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 4px;
+}
+
+/* Currency */
+
+.currency-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.currency-select img {
+    width: 22px;
+}
+
+.currency-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.currency-icon ion-icon {
+    color: var(--bg-color);
+    font-size: 14px;
+}
+
+/* Total */
+
+.trade-total {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* Button */
+
+.trade-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 1260px) {
+    .responsive-stack {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .trade-column {
+        display: none;
+    }
+
+    .market-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .price-value h2 {
+        font-size: 25px;
+        color: var(--light-grey);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-body {
+        padding: 10px 15px;
+    }
+
+    .main-body header {
+        padding: 0 15px;
+    }
+
+    /* Market Stats Heading */
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    /* Coin Image */
+    .coin-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Coin Name */
+    .coin-name {
+        gap: 8px;
+    }
+
+    .coin-name p:first-child {
+        font-size: 24px;
+    }
+
+    .coin-tag {
+        font-size: 11px;
+        padding: 2px 10px;
+    }
+
+    /* Favorite Button */
+    .favorite-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .favorite-btn ion-icon {
+        font-size: 18px;
+    }
+
+    /* Coin Meta */
+    .coin-meta {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .coin-meta p {
+        font-size: 13px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Price Card */
+    .price-card {
+        gap: 18px;
+    }
+
+    /* Top Section */
+    .price-header {
+        /* flex-direction: column; */
+        gap: 12px;
+        align-items: center;
+    }
+
+    .price-value {
+        gap: 10px;
+    }
+
+    .price-value h2 {
+        font-size: 20px;
+        color: var(--light-grey);
+    }
+
+    .price-value p {
+        font-size: 14px;
+    }
+
+    .price-value ion-icon {
+        font-size: 16px;
+    }
+
+    .price-label {
+        gap: 5px;
+    }
+
+    .price-label p {
+        font-size: 13px;
+    }
+
+    .price-label ion-icon {
+        font-size: 16px;
+    }
+
+    /* Price Range */
+    .price-range {
+        gap: 12px;
+    }
+
+    .range-title {
+        gap: 6px;
+    }
+
+    .range-title p {
+        font-size: 14px;
+    }
+
+    .range-title ion-icon {
+        font-size: 18px;
+    }
+
+    .range-filter {
+        padding: 6px 10px;
+        gap: 4px;
+    }
+
+    .range-filter p {
+        font-size: 13px;
+    }
+
+    .range-filter ion-icon {
+        font-size: 14px;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .price-range-footer p {
+        font-size: 12px;
+    }
+
+    .stat-card {
+        padding: 8px;
+    }
+
+    .stat-value {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

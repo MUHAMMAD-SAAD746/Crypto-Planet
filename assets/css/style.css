@@ -37,3 +37,313 @@
     border-radius: 8px;
     padding: 0 42px;
 }
+
+.market-main {
+    background-color: var(--charcoal);
+    color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.market-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 15px;
+}
+
+.market-categories {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.market-category {
+    border: 1px solid var(--light-grey);
+    padding: 8px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.market-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--light-grey);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.market-search ion-icon {
+    font-size: 18px;
+}
+
+.market-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.market-search .settings-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.market-search input::placeholder {
+    color: var(--light-grey);
+}
+
+.filter-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 13px;
+    color: var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.filter-categories ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-categories li {
+    flex: 0 0 auto;
+    width: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-categories li ion-icon {
+    font-size: 13px;
+}
+
+.filter-categories li.active,
+.filter-categories li:hover {
+    color: var(--primary-color);
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.coin-count select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.coin-count select option {
+    background-color: var(--charcoal);
+    color: var(--light-grey);
+}
+
+/* =========================
+   VIEW OPTIONS
+========================= */
+
+.view-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-options ion-icon {
+    font-size: 20px;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.view-options ion-icon:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   CUSTOMIZE
+========================= */
+
+.customize-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.customize-option p {
+    margin: 0;
+}
+
+.customize-option ion-icon {
+    font-size: 18px;
+}
+
+.customize-option:hover,
+.clear-filter:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   CLEAR FILTER
+========================= */
+
+.clear-filter {
+    margin: 0;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.market-table-header {
+    color: var(--light-grey);
+    font-size: 13px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.market-table-header>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.market-table-header ion-icon {
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.market-table-header>div:hover,
+.market-table-header>div:hover ion-icon {
+    color: var(--primary-color);
+}
+
+.market-table-header .chart-column {
+    justify-content: center;
+}
+
+.market-table-row {
+    color: #fff;
+    font-size: 13px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(120, 122, 137, 0.25);
+}
+
+/* Every column */
+.market-table-row>div {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+}
+
+/* Make text vertically centered */
+.market-table-row span {
+    line-height: 1;
+}
+
+/* Rank */
+.coin-rank {
+    gap: 8px;
+    color: var(--light-grey);
+}
+
+/* Coin */
+.coin-name {
+    gap: 10px;
+}
+
+.coin-logo {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.coin-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.coin-title {
+    color: #fff;
+    font-weight: 500;
+}
+
+.coin-tag {
+    background-color: var(--bg-color);
+    color: var(--light-blue);
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* Price */
+.market-price {
+    color: #fff;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Percentage */
+.coin-change {
+    font-weight: 500;
+}
+
+/* High / Low */
+.coin-high,
+.coin-low {
+    color: #fff;
+}
+
+/* Chart */
+.chart-column {
+    justify-content: center;
+}
+
+.chart-image {
+    width: 80px;
+    height: 35px;
+}
+
+.chart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Keep Price heading and Price value perfectly aligned */
+.market-table-header .price-column,
+.market-table-row .market-price {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Same horizontal starting point */
+.market-table-header .price-column,
+.market-table-row .market-price {
+    justify-content: flex-start;
+}
