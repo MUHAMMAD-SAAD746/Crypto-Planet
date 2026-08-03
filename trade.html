@@ -169,9 +169,6 @@
                 </header>
 
 
-
-
-
                 <main class="container-fluid market-main mt-4">
                     <div class="market-toolbar">
                         <div>
@@ -219,12 +216,12 @@
 
 
                     <div class="row market-table-header">
-                        <div class="col-md-4">
+                        <div class="col-5 col-md-4">
                             <span>Coin Name</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-2 price-column">
+                        <div class="col-3 col-md-2 price-column">
                             <span>Coin Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
@@ -234,17 +231,17 @@
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-2 high-col">
                             <span>24h High Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-2 low-col">
                             <span>24h Low Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-1 chart-column">
+                        <div class="col-6 col-lg-4 col-md-1 chart-column">
                             <span>Chart</span>
                         </div>
                     </div>
@@ -257,18 +254,26 @@
                                 <img src="./assets/images/Bitcoin.webp" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">Bitcoin</span>
-                            <span class="coin-tag">BTC</span>
+                            <div class="coin-info">
+                                <span class="coin-title">Bitcoin</span>
+                                <span class="coin-tag">BTC</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$43,975.71</span>
+                            <span class="text-profit">
+                                +0.60%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-profit">
-                            <span>+0.60%</span>
+                            <span>+0.60%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -298,18 +303,26 @@
                                 <img src="./assets/images/Ethereum_Logo.png" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">Ethereum</span>
-                            <span class="coin-tag">ETH</span>
+                            <div class="coin-info">
+                                <span class="coin-title">Ethereum</span>
+                                <span class="coin-tag">ETH</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$43,975.71</span>
+                            <span class="text-loss">
+                                -2.79%
+                                <ion-icon name="trending-down-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-loss">
-                            <span>-2.79%</span>
+                            <span>-2.79%
+                                <ion-icon name="trending-down-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -339,18 +352,26 @@
                                 <img src="./assets/images/xrp.webp" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">XRP</span>
-                            <span class="coin-tag">XRP</span>
+                            <div class="coin-info">
+                                <span class="coin-title">XRP</span>
+                                <span class="coin-tag">XRP</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$0.8721</span>
+                            <span class="text-profit">
+                                +1.40%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-profit">
-                            <span>+1.40%</span>
+                            <span>+1.40%
+                                <ion-icon name="trending-down-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -380,18 +401,26 @@
                                 <img src="./assets/images/polygon.png" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">Polygon</span>
-                            <span class="coin-tag">MATIC</span>
+                            <div class="coin-info">
+                                <span class="coin-title">Polygon</span>
+                                <span class="coin-tag">MATIC</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$1.98</span>
+                            <span class="text-profit">
+                                +2.46%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-profit">
-                            <span>+2.46%%</span>
+                            <span>+2.46%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -421,18 +450,25 @@
                                 <img src="./assets/images/usdc.png" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">United States Dollar</span>
-                            <span class="coin-tag">USDC</span>
+                            <div class="coin-info">
+                                <span class="coin-title">United States Dollar</span>
+                                <span class="coin-tag">USDC</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$42164.54</span>
+                            <span class="text-profit">
+                                +7.76%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-profit">
                             <span>+7.76%</span>
+                            <ion-icon name="trending-up-outline"></ion-icon>
                         </div>
 
                         <!-- High -->
@@ -462,18 +498,26 @@
                                 <img src="./assets/images/solona.png" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">Solana</span>
-                            <span class="coin-tag">SOL</span>
+                            <div class="coin-info">
+                                <span class="coin-title">Solana</span>
+                                <span class="coin-tag">SOL</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$112.13</span>
+                            <span class="text-profit">
+                                +1.06%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-profit">
-                            <span>+1.06%</span>
+                            <span>+1.06%
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -503,18 +547,26 @@
                                 <img src="./assets/images/cardano.png" alt="Ethereum">
                             </div>
 
-                            <span class="coin-title">Cardano</span>
-                            <span class="coin-tag">ADA</span>
+                            <div class="coin-info">
+                                <span class="coin-title">Cardano</span>
+                                <span class="coin-tag">ADA</span>
+                            </div>
                         </div>
 
                         <!-- Price -->
                         <div class="col-md-2 market-price">
                             <span>$112.13</span>
+                            <span class="text-profit">
+                                +1.06%
+                                <ion-icon name="trending-down-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- 24h Change -->
                         <div class="col-md-1 coin-change text-loss">
-                            <span>+1.06%</span>
+                            <span>+1.06%
+                                <ion-icon name="trending-down-outline"></ion-icon>
+                            </span>
                         </div>
 
                         <!-- High -->
@@ -540,7 +592,7 @@
 
 
             <div class="col-lg-4 trade-column">
-                <section class="trade-card">
+                <section class="trade-card trade-form">
                     <div class="trade-tabs">
                         <button class="trade-tab active">Buy BTC</button>
                         <button class="trade-tab">Sell BTC</button>
@@ -621,6 +673,492 @@
                         Buy BTC
                     </button>
                 </section>
+
+
+
+
+                <section class="trade-card order-book-card">
+                    <!-- Tabs -->
+                    <div class="book-tabs">
+                        <button class="book-tab active">Order Book</button>
+                        <button class="book-tab">Trade History</button>
+                    </div>
+
+                    <!-- Filter -->
+                    <div class="book-filter">
+                        <button class="book-filter-btn active">All</button>
+                        <button class="book-filter-btn">Asks</button>
+                        <button class="book-filter-btn">Bids</button>
+                    </div>
+
+
+
+                    <div class="mobile-order-books">
+                        <div class="order-book-content profit-book">
+                            <div class="row order-book-header">
+                                <div class="col-6 col-lg-4">
+                                    <span>Price USD</span>
+                                    <ion-icon name="caret-up-outline"></ion-icon>
+                                </div>
+
+                                <div class="col-6 col-lg-4">
+                                    <span>Qty BTC</span>
+                                    <ion-icon name="caret-up-outline"></ion-icon>
+                                </div>
+
+                                <div class="col-6 col-lg-4">
+                                    <span>Total USD</span>
+                                    <ion-icon name="caret-up-outline"></ion-icon>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width:25%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width:0%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 65%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 65%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width:25%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 0%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width:25%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill profit-loading" style="width: 94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Desktop Price -->
+                        <button class="order-price-btn desktop-price-btn">
+                            $38,555.19
+                        </button>
+
+
+                        <div class="order-book-content loss-book">
+                            <!-- Mobile Header -->
+                            <div class="mobile-order-header">
+                                <div class="mobile-header-item">
+                                    <span>Price USD</span>
+                                    <ion-icon name="caret-up-outline"></ion-icon>
+                                </div>
+
+                                <div class="mobile-header-item">
+                                    <span>Total USD</span>
+                                    <ion-icon name="caret-up-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 68%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width:94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width:30%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 0%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 30%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 94%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width:68%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 30%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 68%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width:30%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="order-book-row">
+                                <div class="order-fill loss-loading" style="width: 68%;"></div>
+
+                                <div class="row">
+                                    <div class="col-6 col-lg-4 text-profit ps-0">
+                                        <p>$ 38,555.19</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>0.299993</p>
+                                    </div>
+
+                                    <div class="col-6 col-lg-4">
+                                        <p>$ 15,156.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile Button -->
+                    <button class="order-price-btn mobile-price-btn">
+                        $38,555.19
+                    </button>
+                </section>
             </div>
         </div>
     </div>
@@ -650,6 +1188,22 @@
         if (isAuthenticated) {
             navbar.classList.add("authenticated");
         }
+
+        // update layout on mobile screensss
+        const orderBook = document.querySelector(".order-book-card");
+        const marketHeader = document.querySelector(".market-header");
+        const buySellCard = document.querySelector(".trade-form");
+
+        function updateLayout() {
+            if (window.innerWidth <= 991) {
+                marketHeader.after(orderBook);
+            } else {
+                buySellCard.after(orderBook);
+            }
+        }
+
+        updateLayout();
+        window.addEventListener("resize", updateLayout);
     </script>
 </body>
 

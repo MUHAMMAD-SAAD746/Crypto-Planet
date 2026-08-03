@@ -17,6 +17,13 @@
     color: var(--primary-color);
 }
 
+.text-profit{
+    color: var(--profit-text) !important;
+}
+.text-loss{
+    color: var(--loss-text) !important;
+}
+
 .text-cyan {
     color: var(--cyan);
 }
@@ -290,13 +297,12 @@
 
 .coin-title {
     color: #fff;
-    font-weight: 500;
 }
 
 .coin-tag {
     background-color: var(--bg-color);
     color: var(--light-blue);
-    font-size: 11px;
+    font-size: 11px !important;
     padding: 3px 6px;
     border-radius: 4px;
 }
