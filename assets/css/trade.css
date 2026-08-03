@@ -1171,4 +1171,95 @@
         font-size: 15px;
         font-weight: 600;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* test */
+
+    /* Make each row only have 2 columns */
+    .order-book-row .row,
+    .order-book-header {
+        display: flex;
+        margin: 0;
+    }
+
+    /* Hide Qty */
+    .order-book-header>.col-6:nth-child(2),
+    .order-book-row .row>.col-6:nth-child(2) {
+        display: none;
+    }
+
+    /* Remaining two columns */
+    .order-book-header>.col-6,
+    .order-book-row .row>.col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 1px;
+    }
+
+    /* Keep values on one line */
+    .order-book-row p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+    }
+
+    .mobile-order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-header-item:first-child {
+        justify-content: flex-start;
+    }
+
+    .mobile-header-item:last-child {
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .mobile-header-item {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .order-book-row .row{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .order-book-row .row > .col-6:first-child{
+        text-align:left !important;
+        padding-left: 2px;
+    }
+
+    .order-book-row .row > .col-6:last-child{
+        text-align:right !important;
+        padding-right: 2px;
+    }
 }
