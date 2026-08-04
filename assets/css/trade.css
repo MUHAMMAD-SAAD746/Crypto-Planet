@@ -17,8 +17,7 @@
 }
 
 .main-body .market-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .section-title {
@@ -28,12 +27,10 @@
     margin-bottom: 35px;
 }
 
-/* ---------- Coin Header ---------- */
 .coin-header {
     display: flex;
     flex-direction: column;
     gap: 22px;
-    /* was 18px */
 }
 
 .coin-info {
@@ -125,16 +122,13 @@
 
 
 /* ===========================
-   Price Card
+    Price Card
 =========================== */
-
 .price-card {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-
-/* Top */
 
 .price-header {
     display: flex;
@@ -191,8 +185,6 @@
     gap: 10px;
 }
 
-/* High / Low Header */
-
 .price-range-header {
     display: flex;
     justify-content: space-between;
@@ -208,11 +200,9 @@
 
 .range-title p {
     margin: 0;
-    /* color: var(--light-grey); */
 }
 
 .range-title ion-icon {
-    /* color: var(--primary-color); */
     font-size: 20px;
 }
 
@@ -237,8 +227,6 @@
     font-size: 16px;
 }
 
-/* Progress */
-
 .progress-bar {
     width: 100%;
     height: 8px;
@@ -253,8 +241,6 @@
     background: var(--primary-color);
 }
 
-/* Footer */
-
 .price-range-footer {
     display: flex;
     justify-content: space-between;
@@ -268,9 +254,8 @@
 }
 
 /* ==========================
-   Stats Section
+    Stats Section
 ========================== */
-
 .stats-row {
     margin-top: 40px;
 }
@@ -302,7 +287,6 @@
     margin: 0;
     color: #fff;
     font-size: 18px;
-    /* font-weight: 700; */
 }
 
 .stat-change {
@@ -323,10 +307,170 @@
     row-gap: 30px;
 }
 
-/* ==========================
-   Trade Card
-========================== */
 
+
+
+
+/* ===========================
+    trade Chart Section
+=========================== */
+.chart-section {
+    background: var(--charcoal);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.chart-section > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 20px;
+}
+
+.chart-section h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.chart-section p {
+    color: var(--light-grey);
+    margin: 0;
+    font-size: 15px;
+}
+
+.chart-section label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    height: 48px;
+    border: 1px solid var(--light-grey);
+    border-radius: 3px;
+    padding: 0 16px;
+    cursor: text;
+}
+
+.chart-section label ion-icon {
+    color: var(--light-grey) !important;
+    font-size: 18px;
+}
+
+.chart-section input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 15px;
+}
+
+.chart-section input::placeholder {
+    color: var(--light-grey);
+}
+
+/* ===========================
+   Controls
+=========================== */
+
+.market-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.market-tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.market-tabs .tab {
+    background: var(--bg-color);
+    color: var(--white);
+
+    padding: 10px 22px;
+
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    color: var(--light-grey);
+}
+
+.market-tabs .tab.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ===========================
+   Right Actions
+=========================== */
+
+.market-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.market-actions button {
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: var(--charcoal);
+    border: none;
+    border-radius: 6px;
+
+    color: var(--light-grey);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.market-actions button:hover,
+.market-tabs .tab:hover {
+    opacity: .85;
+}
+
+.time-filter {
+    padding: 0 16px;
+}
+
+.time-filter span {
+    font-size: 14px;
+}
+
+.time-filter ion-icon {
+    font-size: 18px;
+}
+
+.market-actions button:not(.time-filter) ion-icon {
+    font-size: 20px;
+}
+
+/* candle chart */
+.chart-container{
+    margin-top:20px;
+    overflow: hidden;
+}
+
+#trading-chart{
+    width:100%;
+    /* height:400px; */
+}
+
+
+
+
+
+/* ==========================
+    Trade Card
+========================== */
 .trade-card {
     background: var(--charcoal);
     border-radius: 8px;
@@ -339,8 +483,6 @@
 .trade-form {
     margin-bottom: 25px;
 }
-
-/* Tabs */
 
 .trade-tabs {
     display: flex;
@@ -362,8 +504,6 @@
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: -1px;
 }
-
-/* Order Types */
 
 .order-types {
     display: flex;
@@ -397,8 +537,6 @@
     border-color: transparent;
 }
 
-/* Wallet */
-
 .wallet-info {
     display: flex;
     justify-content: space-between;
@@ -416,8 +554,6 @@
     height: 20px;
 }
 
-/* Input Groups */
-
 .trade-input-group {
     display: flex;
     justify-content: space-between;
@@ -427,13 +563,6 @@
 .trade-input {
     width: 100%;
 }
-
-/* .trade-input label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--light-grey);
-    font-size: 14px;
-} */
 
 .input-box {
     display: flex;
@@ -458,12 +587,6 @@
     padding-bottom: 4px;
 }
 
-/* .input-box span {
-    padding: 0 4px;
-    color: #fff;
-
-} */
-
 .input-prefix {
     padding: 0 0 0 14px;
     color: #fff;
@@ -478,8 +601,6 @@
     color: #fff;
     padding: 12px 4px;
 }
-
-/* Currency */
 
 .currency-select {
     display: flex;
@@ -515,15 +636,11 @@
     font-size: 14px;
 }
 
-/* Total */
-
 .trade-total {
     display: flex;
     justify-content: space-between;
     color: #fff;
 }
-
-/* Button */
 
 .trade-btn {
     width: 100%;
@@ -535,14 +652,6 @@
     font-size: 16px;
     font-weight: 600;
 }
-
-
-
-/* ===== book card ===================== */
-
-/* ===================================
-   Order Book Tabs
-=================================== */
 
 .book-tabs {
     display: flex;
@@ -576,10 +685,6 @@
     background: var(--primary-color);
 }
 
-/* ===================================
-   Filter
-=================================== */
-
 .book-filter {
     display: flex;
     gap: 10px;
@@ -603,10 +708,6 @@
     background: var(--primary-color);
     color: #fff;
 }
-
-/* ===================================
-   Order Book Header
-=================================== */
 
 .order-book-header {
     margin-bottom: 20px;
@@ -633,15 +734,12 @@
     justify-content: flex-end;
 }
 
-
-/* Order Row */
 .order-book-row {
     position: relative;
     overflow: hidden;
     margin: 10px 0;
 }
 
-/* Volume Background */
 .order-fill {
     position: absolute;
     top: 0;
@@ -670,7 +768,6 @@
     color: #616269;
 }
 
-/* Alignment */
 .order-book-row .row .col-lg-4:nth-child(1) {
     text-align: left;
 }
@@ -683,15 +780,6 @@
     text-align: right;
 }
 
-
-
-
-
-
-/* ===================================
-   Price Button
-=================================== */
-
 .order-price-btn {
     width: 100%;
     border: none;
@@ -701,6 +789,7 @@
     padding: 14px;
     font-size: 18px;
     font-weight: 600;
+    margin: 20px 0;
 }
 
 .desktop-price-btn {
@@ -718,21 +807,6 @@
 .mobile-order-header {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========================================= */
-
 
 .coin-change span,
 .market-price .text-profit {
@@ -760,7 +834,7 @@
         margin-bottom: 20px;
     }
 
-    .market-table-header .col-md-1:not(.chart-column),
+    .market-table-header .col-lg-1:not(.chart-column),
     .market-table-row .coin-change {
         display: none;
     }
@@ -769,7 +843,6 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        /* Make children take full width */
         gap: 4px;
     }
 
@@ -790,6 +863,44 @@
 }
 
 @media (max-width: 991.98px) {
+    header.market-header .coin-header .coin-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* ================================= */
+    .chart-section label {
+        display: none;
+    }
+
+    .market-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .market-tabs {
+        width: 100%;
+    }
+
+    .market-tabs .tab {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .market-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    /* ================================= */
+
+
+
     .trade-column .trade-card:first-child {
         display: none;
     }
@@ -866,18 +977,11 @@
         padding: 3px 0;
     }
 
-    .market-table-header .chart-column {
-        order: 2;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
     .market-table-header .price-column {
         order: 3;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
         white-space: nowrap;
     }
 
@@ -921,12 +1025,13 @@
         padding: 3px 0 !important;
     }
 
-    .market-table-row .chart-column {
+    .market-table-row .chart-column,
+    .market-table-header .chart-column {
         order: 2;
         flex: 0 0 33.33%;
         max-width: 33.33%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .chart-image img {
@@ -940,14 +1045,13 @@
         max-width: 25%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end !important;
         gap: 5px;
     }
 
     .market-price span {
         font-size: 13px;
         font-weight: 300;
-        /* text-align: center; */
         color: #fff;
     }
 
@@ -1017,6 +1121,71 @@
     .mobile-header-item ion-icon {
         font-size: 12px;
     }
+
+    /* Make each row only have 2 columns */
+    .order-book-row .row,
+    .order-book-header {
+        display: flex;
+        margin: 0;
+    }
+
+    /* Hide Qty */
+    .order-book-header>.col-6:nth-child(2),
+    .order-book-row .row>.col-6:nth-child(2) {
+        display: none;
+    }
+
+    /* Remaining two columns */
+    .order-book-header>.col-6,
+    .order-book-row .row>.col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 1px;
+    }
+
+    /* Keep values on one line */
+    .order-book-row p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+    }
+
+    .mobile-order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-header-item:first-child {
+        justify-content: flex-start;
+    }
+
+    .mobile-header-item:last-child {
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .mobile-header-item {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .order-book-row .row{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .order-book-row .row > .col-6:first-child{
+        text-align:left !important;
+        padding-left: 2px;
+    }
+
+    .order-book-row .row > .col-6:last-child{
+        text-align:right !important;
+        padding-right: 2px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -1028,19 +1197,16 @@
         padding: 0 15px;
     }
 
-    /* Market Stats Heading */
     .section-title {
         font-size: 28px;
         margin-bottom: 24px;
     }
 
-    /* Coin Image */
     .coin-image {
         width: 48px;
         height: 48px;
     }
 
-    /* Coin Name */
     .coin-name {
         gap: 8px;
     }
@@ -1054,7 +1220,6 @@
         padding: 2px 10px;
     }
 
-    /* Favorite Button */
     .favorite-btn {
         width: 36px;
         height: 36px;
@@ -1064,7 +1229,6 @@
         font-size: 18px;
     }
 
-    /* Coin Meta */
     .coin-meta {
         gap: 16px;
         flex-wrap: wrap;
@@ -1195,71 +1359,4 @@
 
 
 
-
-    /* test */
-
-    /* Make each row only have 2 columns */
-    .order-book-row .row,
-    .order-book-header {
-        display: flex;
-        margin: 0;
-    }
-
-    /* Hide Qty */
-    .order-book-header>.col-6:nth-child(2),
-    .order-book-row .row>.col-6:nth-child(2) {
-        display: none;
-    }
-
-    /* Remaining two columns */
-    .order-book-header>.col-6,
-    .order-book-row .row>.col-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding-left: 1px;
-    }
-
-    /* Keep values on one line */
-    .order-book-row p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 12px;
-    }
-
-    .mobile-order-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .mobile-header-item:first-child {
-        justify-content: flex-start;
-    }
-
-    .mobile-header-item:last-child {
-        justify-content: flex-end;
-        text-align: right;
-    }
-
-    .mobile-header-item {
-        white-space: nowrap;
-        font-size: 12px;
-    }
-
-    .order-book-row .row{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    }
-
-    .order-book-row .row > .col-6:first-child{
-        text-align:left !important;
-        padding-left: 2px;
-    }
-
-    .order-book-row .row > .col-6:last-child{
-        text-align:right !important;
-        padding-right: 2px;
-    }
 }

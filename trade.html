@@ -27,13 +27,15 @@
                         <div class="col-12 col-md-6 responsive-stack">
                             <div class="coin-header">
                                 <div class="coin-info">
-                                    <div class="coin-image">
-                                        <img src="./assets/images/Bitcoin.webp" alt="">
-                                    </div>
+                                    <div class="d-flex">
+                                        <div class="coin-image">
+                                            <img src="./assets/images/Bitcoin.webp" alt="">
+                                        </div>
 
-                                    <div class="coin-name">
-                                        <p>Bitcoin</p>
-                                        <p class="coin-tag">BTC</p>
+                                        <div class="coin-name ms-3">
+                                            <p>Bitcoin</p>
+                                            <p class="coin-tag">BTC</p>
+                                        </div>
                                     </div>
 
                                     <div class="favorite-btn">
@@ -169,6 +171,54 @@
                 </header>
 
 
+                <section class="chart-section">
+                    <div>
+                        <div>
+                            <h2>Bitcoin to USD Chart</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid.</p>
+                        </div>
+
+
+                        <label for="coin-search">
+                            <ion-icon name="search-outline"></ion-icon>
+                            <input type="text" placeholder="Search Coin Name" name="" id="coin-search">
+                        </label>
+                    </div>
+
+                    <div class="market-controls">
+                        <div class="market-tabs">
+                            <div class="tab active">Price</div>
+                            <div class="tab">Market Cap</div>
+                            <div class="tab">Trade View</div>
+                        </div>
+
+                        <div class="market-actions">
+                            <button class="time-filter">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                                <span>24h</span>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+
+                            <button aria-label="Chart View">
+                                <ion-icon name="stats-chart-outline"></ion-icon>
+                            </button>
+
+                            <button aria-label="Expand">
+                                <ion-icon name="expand"></ion-icon>
+                            </button>
+
+                            <button aria-label="More Options">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div id="trading-chart"></div>
+                    </div>
+                </section>
+
+
                 <main class="container-fluid market-main mt-4">
                     <div class="market-toolbar">
                         <div>
@@ -216,32 +266,32 @@
 
 
                     <div class="row market-table-header">
-                        <div class="col-5 col-md-4">
+                        <div class="col-5 col-lg-4">
                             <span>Coin Name</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-3 col-md-2 price-column">
+                        <div class="col-3 col-lg-2 price-column">
                             <span>Coin Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-1">
+                        <div class="col-lg-1">
                             <span>24%</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-2 high-col">
+                        <div class="col-lg-2 high-col">
                             <span>24h High Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-md-2 low-col">
+                        <div class="col-lg-2 low-col">
                             <span>24h Low Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-4 col-lg-4 col-md-1 chart-column">
+                        <div class="col-4 col-lg-1 col-md-1 chart-column">
                             <span>Chart</span>
                         </div>
                     </div>
@@ -249,7 +299,7 @@
 
                     <div class="row market-table-row">
                         <!-- Coin -->
-                        <div class="col-md-4 coin-name">
+                        <div class="col-5 col-lg-4 coin-name">
                             <div class="coin-logo">
                                 <img src="./assets/images/Bitcoin.webp" alt="Ethereum">
                             </div>
@@ -261,7 +311,7 @@
                         </div>
 
                         <!-- Price -->
-                        <div class="col-md-2 market-price">
+                        <div class="col-3 col-lg-2 market-price">
                             <span>$43,975.71</span>
                             <span class="text-profit">
                                 +0.60%
@@ -270,24 +320,24 @@
                         </div>
 
                         <!-- 24h Change -->
-                        <div class="col-md-1 coin-change text-profit">
+                        <div class="col-lg-1 coin-change text-profit">
                             <span>+0.60%
                                 <ion-icon name="trending-up-outline"></ion-icon>
                             </span>
                         </div>
 
                         <!-- High -->
-                        <div class="col-md-2 coin-high">
+                        <div class="col-lg-2 coin-high">
                             <span>$44,727.80</span>
                         </div>
 
                         <!-- Low -->
-                        <div class="col-md-2 coin-low">
+                        <div class="col-lg-2 coin-low">
                             <span>$43,318.64</span>
                         </div>
 
                         <!-- Chart -->
-                        <div class="col-md-1 chart-column">
+                        <div class="col-4 col-lg-1 chart-column">
                             <div class="chart-image">
                                 <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
                             </div>
@@ -1174,9 +1224,12 @@
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="./assets/JavaScript/trading-chart.js"></script>
 
     <script src="./components/navbar.js"></script>
     <script src="./components/footer.js"></script>
+
 
     <script>
         document.getElementById('navbar').innerHTML = loadNavbar();
@@ -1190,13 +1243,34 @@
         }
 
         // update layout on mobile screensss
+        // const orderBook = document.querySelector(".order-book-card");
+        // const marketHeader = document.querySelector(".market-header");
+        // const buySellCard = document.querySelector(".trade-form");
+
+        // function updateLayout() {
+        //     if (window.innerWidth <= 991) {
+        //         marketHeader.after(orderBook);
+        //     } else {
+        //         buySellCard.after(orderBook);
+        //     }
+        // }
+
+        // updateLayout();
+        // window.addEventListener("resize", updateLayout);
+
+
+
+
+
         const orderBook = document.querySelector(".order-book-card");
         const marketHeader = document.querySelector(".market-header");
+        const chartSection = document.querySelector(".chart-section");
+        const marketHistory = document.querySelector(".market-main");
         const buySellCard = document.querySelector(".trade-form");
 
         function updateLayout() {
             if (window.innerWidth <= 991) {
-                marketHeader.after(orderBook);
+                chartSection.after(orderBook);
             } else {
                 buySellCard.after(orderBook);
             }

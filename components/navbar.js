@@ -83,7 +83,7 @@ function loadNavbar() {
                                 <span>Saad</span>
                             </button>
 
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul class="dropdown-menu">
                                 <li>
                                     <button class="dropdown-item" type="button">
                                         <ion-icon name="log-out-outline"></ion-icon>
