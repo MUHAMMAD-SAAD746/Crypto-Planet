@@ -1,0 +1,239 @@
+.watchlist-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.watchlist-btn,
+.add-coin-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchlist-heading {
+    display: flex;
+    align-items: center;
+}
+
+.watchlist-heading ion-icon {
+    display: none;
+}
+
+.watchlist-btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.add-coin-btn {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-color);
+    color: var(--light-grey);
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.watchlist-btn ion-icon {
+    font-size: 16px;
+}
+
+.add-coin-btn ion-icon {
+    font-size: 22px;
+}
+
+.market-price span:nth-child(2) {
+    display: none;
+}
+
+@media (max-width: 1260px) {
+
+    .market-table-header .col-lg-1:not(.chart-column),
+    .market-table-row .coin-change {
+        display: none;
+    }
+
+    .market-price {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .market-price>span {
+        width: 100%;
+        text-align: left;
+    }
+
+    .market-price>span:last-child {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        font-size: 11px;
+        margin-top: 0;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .watchlist-heading {
+        width: 100% !important;
+        justify-content: space-between;
+    }
+
+    .watchlist-info {
+        width: 100%;
+    }
+
+    .watchlist-heading ion-icon {
+        display: block;
+        font-size: 22px;
+        color: var(--light-grey);
+        cursor: pointer;
+    }
+
+    .market-category {
+        display: none !important;
+    }
+
+    .toolbar-right {
+        display: none !important;
+    }
+
+    .market-table-header .high-col,
+    .market-table-header .low-col,
+    .market-table-row .coin-high,
+    .market-table-row .coin-low {
+        display: none;
+    }
+
+    .coin-name {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .coin-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .coin-title {
+        display: block;
+        font-size: 13px;
+        line-height: 1;
+    }
+
+    .coin-tag {
+        display: block;
+        font-size: 11px;
+        line-height: 1;
+        background-color: var(--charcoal);
+        color: var(--light-blue) !important;
+        padding: 3px 0;
+    }
+
+    .market-table-header .price-column {
+        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+
+    .market-table-row {
+        display: flex;
+        align-items: center;
+        padding: 18px 0;
+    }
+
+    .market-table-row .coin-name {
+        flex: 0 0 41.67%;
+        max-width: 41.67%;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .coin-logo {
+        flex-shrink: 0;
+    }
+
+    .coin-logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .coin-title {
+        display: block;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    .coin-tag {
+        display: block;
+        color: #888;
+        font-size: 11px;
+        margin-top: 3px;
+        padding: 3px 0 !important;
+    }
+
+    .market-table-row .chart-column,
+    .market-table-header .chart-column {
+        order: 2;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .chart-image img {
+        width: 60px;
+    }
+
+    /* Price */
+    .market-table-row .market-price {
+        order: 3;
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end !important;
+        gap: 5px;
+    }
+
+    .market-price span {
+        font-size: 13px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    /* Hide Separate Change Column */
+    .market-table-row .coin-change {
+        display: none;
+    }
+
+    .trade-form {
+        display: none;
+    }
+}

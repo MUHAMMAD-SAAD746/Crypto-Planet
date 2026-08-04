@@ -33,7 +33,7 @@ function loadNavbar() {
 
                             <li class="${currentPage === "watchlist.html" ? "active" : "" }">
                                 <ion-icon name="bookmark-outline"></ion-icon>
-                                <a href="#">Watchlist</a>
+                                <a href="./watchlist.html">Watchlist</a>
                             </li>
 
                             <li class="${currentPage === "portfolio.html" ? "active" : "" }">

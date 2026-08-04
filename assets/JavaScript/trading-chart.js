@@ -54,7 +54,22 @@ const chart = LightweightCharts.createChart(
         timeScale: {
             timeVisible: true,
             secondsVisible: false
-        }
+        },
+
+
+        localization: {
+            priceFormatter: (price) => {
+                if (price >= 1000000) {
+                    return (price / 1000000).toFixed(2) + "M";
+                }
+
+                if (price >= 1000) {
+                    return (price / 1000).toFixed(2) + "k";
+                }
+
+                return price.toFixed(2);
+            }
+        },
     }
 );
 
