@@ -826,12 +826,14 @@
     <script>
         document.getElementById('navbar').innerHTML = loadNavbar();
         document.getElementById('footer').innerHTML = loadFooter();
+        const footer = document.querySelector("footer");
 
         const navbar = document.querySelector(".navbar-custom");
         let isAuthenticated = true;
 
         if (isAuthenticated) {
             navbar.classList.add("authenticated");
+            footer.classList.add("authenticated");
         }
     </script>
 

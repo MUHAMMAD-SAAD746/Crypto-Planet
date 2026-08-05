@@ -1236,10 +1236,12 @@
         document.getElementById('footer').innerHTML = loadFooter();
 
         const navbar = document.querySelector(".navbar-custom");
+        const footer = document.querySelector("footer");
         let isAuthenticated = true;
 
         if (isAuthenticated) {
             navbar.classList.add("authenticated");
+            footer.classList.add("authenticated");
         }
 
 
