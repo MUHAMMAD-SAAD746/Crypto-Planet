@@ -326,10 +326,6 @@
 }
 
 /* Chart */
-.chart-column {
-    justify-content: center;
-}
-
 .chart-image {
     width: 80px;
     height: 35px;
@@ -541,4 +537,48 @@
     color: #fff;
     font-size: 16px;
     font-weight: 600;
+}
+
+
+
+/* market-card css below */
+.market-tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.market-tab {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+    color: var(--light-grey);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.market-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.market-tab:hover {
+    color: var(--primary-color);
+}
+
+.market-card .coin-name .coin-tag {
+    margin-left: 10px;
+}
+
+.market-card .market-table-row {
+    padding: 12px 0 8px;
+}
+
+.market-card .coin-name {
+    padding-left: 0;
+}
+
+.market-price span:nth-child(2) {
+    display: none;
 }

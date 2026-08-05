@@ -50,31 +50,30 @@
     font-size: 22px;
 }
 
-.market-price span:nth-child(2) {
+/* .market-price span:nth-child(2) {
     display: none;
-}
+} */
 
 /* market side card */
-.market-card .market-table-row {
+/* .market-card .market-table-row {
     padding: 12px 0 8px;
 }
 
 .market-card .coin-name {
     padding-left: 0;
-}
+} */
 
-.market-card .coin-name .coin-tag {
+/* .market-card .coin-name .coin-tag {
     margin-left: 10px;
-}
+} */
 
-.market-tabs {
+/* .market-tabs {
     display: flex;
     gap: 20px;
     border-bottom: 1px solid var(--border-color);
 }
 
 .market-tab {
-    /* flex: 1; */
     text-align: center;
     padding: 12px 0;
     font-size: 13px;
@@ -91,7 +90,7 @@
 
 .market-tab:hover {
     color: var(--primary-color);
-}
+} */
 
 .market-card .market-table-header .price-column,
 .market-card .market-table-row .market-price {
