@@ -21,7 +21,7 @@
 
     <main class="main-body">
         <div class="row">
-            <div class="col-lg-8 mb-3">
+            <div class="col-lg-8 left-panel mb-4">
                 <header id="portfolio-header">
                     <!-- Header -->
                     <div class="portfolio-top">
@@ -32,7 +32,7 @@
                             </p>
                         </div>
 
-                        <div class="portfolio-actions">
+                        <div class="portfolio-actions d-none d-md-flex">
                             <button class="portfolio-btn">
                                 <ion-icon name="create-outline"></ion-icon>
                                 <span>Edit</span>
@@ -42,6 +42,10 @@
                                 <ion-icon name="add-outline"></ion-icon>
                                 <span>Create New Portfolio</span>
                             </button>
+                        </div>
+
+                        <div class="d-block d-md-none">
+                            <ion-icon name="ellipsis-vertical"></ion-icon>
                         </div>
                     </div>
 
@@ -103,33 +107,449 @@
 
                             <div class="portfolio-item">
                                 <p class="portfolio-label">
-                                <ion-icon name="time-outline"></ion-icon>
-                                <span>All Time Profit / Loss</span>
-                            </p>
+                                    <ion-icon name="time-outline"></ion-icon>
+                                    <span>All Time Profit / Loss</span>
+                                </p>
 
-                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center gap-2">
 
-                                <h4 class="portfolio-value mb-0">
-                                    $2,000.12
-                                </h4>
+                                    <h4 class="portfolio-value">
+                                        $2,000.12
+                                    </h4>
 
-                                <span class="text-profit d-flex align-items-center">
-                                    +2%
-                                    <ion-icon name="trending-up-outline"></ion-icon>
-                                </span>
+                                    <span class="text-profit d-flex align-items-center">
+                                        +2%
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </span>
 
-                            </div>
+                                </div>
                             </div>
 
                         </div>
                     </div>
 
                 </header>
+
+
+
+                <section class="allocation-section">
+                    <div class="allocation-card">
+
+                        <!-- Header -->
+                        <div class="allocation-header">
+                            <h2 class="allocation-title">Coin Allocation</h2>
+
+                            <div class="allocation-actions">
+                                <!-- Time Filter -->
+                                <button class="allocation-filter-btn allocation-btn">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+                                    <span>Month</span>
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </button>
+
+                                <!-- View Toggle -->
+                                <button class="allocation-view-btn allocation-btn">
+                                    <ion-icon name="grid-outline"></ion-icon>
+                                </button>
+
+                                <!-- More Options -->
+                                <button class="allocation-menu-btn allocation-btn">
+                                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row gx-0 allocation-table-header">
+                            <div class="col col-lg-3 allocation-header-item ps-0">
+                                <p class="allocation-header-text">Pair / Holding</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+
+                            <div class="col col-lg allocation-header-item order-qty-col pe-0">
+                                <p class="allocation-header-text">In Order QTY</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+
+                            <div class="col col-lg allocation-header-item pe-0 avg-buy-col">
+                                <p class="allocation-header-text">Price / Avg Buy</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+
+                            <div class="col col-lg allocation-header-item pe-0 holding-col">
+                                <p class="allocation-header-text">Holding Assets</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+
+                            <div class="col col-lg allocation-header-item pe-0">
+                                <p class="allocation-header-text desktop-text">Total Asset Value</p>
+                                <p class="allocation-header-text mobile-text">Asset Value</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+
+                            <div class="col col-lg allocation-header-item pe-0 profit-col">
+                                <p class="allocation-header-text">Profit / Loss</p>
+                                <ion-icon class="allocation-sort-icon" name="caret-up-outline"></ion-icon>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/Bitcoin.webp" alt="Ethereum">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">Bitcoin</span>
+                                    <span class="coin-tag">BTC</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$43,318.41</p>
+                                    <p class="m-0">$38.235.25</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>0.10585</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div>
+                                        <ion-icon name="add-outline"></ion-icon>
+                                        <span>$43,318.64</span>
+                                    </div>
+
+                                    <div class="text-profit">
+                                        <span>+0.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/xrp.webp" alt="XRP logo">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">XRP</span>
+                                    <span class="coin-tag">XRP</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$0.00917</p>
+                                    <p class="m-0">$0.01773</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>150</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div>
+                                        <ion-icon name="add-outline"></ion-icon>
+                                        <span>$120.00</span>
+                                    </div>
+
+                                    <div class="text-profit">
+                                        <span>+3.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/litecoin.png" alt="XRP logo">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">Litecoin</span>
+                                    <span class="coin-tag">LTC</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$43,318.41</p>
+                                    <p class="m-0">$38.235.25</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>5</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div class="text-loss">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                        <span>$43,318.64</span>
+                                    </div>
+
+                                    <div class="text-loss">
+                                        <span>-1.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/stellar.png" alt="stellar logo">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">Stellar</span>
+                                    <span class="coin-tag">XLM</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$43,318.41</p>
+                                    <p class="m-0">$38.235.25</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>258</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div>
+                                        <ion-icon name="add-outline"></ion-icon>
+                                        <span>$43,318.64</span>
+                                    </div>
+
+                                    <div class="text-profit">
+                                        <span>+3.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/polkadot.png" alt="XRP logo">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">Polkadot</span>
+                                    <span class="coin-tag">DOT</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$43,318.41</p>
+                                    <p class="m-0">$38.235.25</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>3</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div class="text-loss">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                        <span>$43,318.64</span>
+                                    </div>
+
+                                    <div class="text-loss">
+                                        <span>-1.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-0 allocation-table-row">
+                            <div class="col col-lg-3 coin-name allocation-table-item ps-0">
+                                <div class="coin-logo">
+                                    <img src="./assets/images/polygon.png" alt="Polygon logo">
+                                </div>
+
+                                <div class="coin-info">
+                                    <span class="coin-title">Polygon</span>
+                                    <span class="coin-tag">MATIC</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 order-qty-col">
+                                <span>0</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0 avg-buy-col">
+                                <div>
+                                    <p class="m-0">$0.00917</p>
+                                    <p class="m-0">$0.01773</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item top-align pe-0 holding-col">
+                                <span>10</span>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item pe-0">
+                                <div>
+                                    <p class="m-0">$10,12.84</p>
+                                    <p class="m-0">$10,00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-lg allocation-table-item profit-col pe-0">
+                                <div>
+                                    <div>
+                                        <ion-icon name="add-outline"></ion-icon>
+                                        <span>$120.00</span>
+                                    </div>
+
+                                    <div class="text-profit">
+                                        <span>+3.60%</span>
+                                        <ion-icon name="trending-up-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="allocation-pagination">
+                            <div class="asset-count">
+                                <p class="m-0">52 Assets</p>
+                            </div>
+
+                            <div class="pagination-nav">
+                                <button class="pagination-btn pagination-prev" type="button">
+                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                                </button>
+
+                                <span class="pagination-number active">1</span>
+                                <span class="pagination-number">2</span>
+                                <span class="pagination-dots">...</span>
+                                <span class="pagination-number">6</span>
+
+                                <button class="pagination-btn pagination-next" type="button">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
 
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 right-panel">
                 <section class="trade-card trade-form">
                     <div class="trade-tabs mb-2">
                         <button class="trade-tab active">Buy BTC</button>
@@ -203,7 +623,7 @@
 
 
 
-                <section class="container-fluid market-main market-card mt-4">
+                <section class="container-fluid market-main market-card ">
                     <div class="market-tabs">
                         <div class="market-tab active">Top Gainer</div>
                         <div class="market-tab">Top Loser</div>
@@ -216,7 +636,7 @@
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
 
-                        <div class="col-3 col-lg-4 price-column">
+                        <div class="col-3 col-lg-4 price-column pe-0">
                             <span>Coin Price</span>
                             <ion-icon name="caret-up-outline"></ion-icon>
                         </div>
@@ -290,7 +710,7 @@
                         </div>
 
                         <!-- Chart -->
-                        <div class="col-4 col-md-1 chart-column px-0 d-block d-lg-none">
+                        <div class="col-4 chart-column px-0 d-block d-lg-none">
                             <div class="chart-image">
                                 <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
                             </div>
@@ -321,7 +741,7 @@
                             <span>-2.18%</span>
                         </div>
 
-                        <div class="col-4 col-md-1 chart-column px-0 d-block d-lg-none">
+                        <div class="col-4 chart-column px-0 d-block d-lg-none">
                             <div class="chart-image">
                                 <img src="./assets/images/charcoal-graph.PNG" alt="Dogecoin chart">
                             </div>
@@ -356,7 +776,7 @@
                         </div>
 
                         <!-- Chart -->
-                        <div class="col-4 col-md-1 chart-column px-0 d-block d-lg-none">
+                        <div class="col-4 chart-column px-0 d-block d-lg-none">
                             <div class="chart-image">
                                 <img src="./assets/images/charcoal-graph.PNG" alt="Ethereum chart">
                             </div>
