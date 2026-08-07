@@ -1,3 +1,12 @@
+.main-body .market-main {
+    padding: 20px 45px;
+}
+
+
+.market-table-row .coin-name {
+    padding-left: 0 !important;
+}
+
 .watchlist-actions {
     display: flex;
     align-items: center;
@@ -50,48 +59,6 @@
     font-size: 22px;
 }
 
-/* .market-price span:nth-child(2) {
-    display: none;
-} */
-
-/* market side card */
-/* .market-card .market-table-row {
-    padding: 12px 0 8px;
-}
-
-.market-card .coin-name {
-    padding-left: 0;
-} */
-
-/* .market-card .coin-name .coin-tag {
-    margin-left: 10px;
-} */
-
-/* .market-tabs {
-    display: flex;
-    gap: 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.market-tab {
-    text-align: center;
-    padding: 12px 0;
-    font-size: 13px;
-    color: var(--light-grey);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-}
-
-.market-tab.active {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
-}
-
-.market-tab:hover {
-    color: var(--primary-color);
-} */
-
 .market-card .market-table-header .price-column,
 .market-card .market-table-row .market-price {
     display: flex;
@@ -132,10 +99,10 @@
         justify-content: flex-end;
     }
 
-    .market-card .market-price > span {
-    width: auto;
-    text-align: right;
-}
+    .market-card .market-price>span {
+        width: auto;
+        text-align: right;
+    }
 
     .market-price {
         display: flex;
@@ -161,9 +128,19 @@
 }
 
 @media (max-width: 991.98px) {
+    .col-lg-8,
+    .col-lg-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .main-body {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .main-body .market-main {
+        padding: 20px 16px;
     }
 
     .watchlist-heading {

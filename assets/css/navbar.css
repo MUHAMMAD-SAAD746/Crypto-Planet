@@ -296,6 +296,11 @@ nav ul li.active {
     filter: invert(1);
 }
 
+.auth-nav-btn.active-auth-btn {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
 
 @media (min-width: 992px) and (max-width: 1310px) {
 
@@ -361,6 +366,10 @@ nav ul li.active {
 }
 
 @media (max-width: 991.98px) {
+
+    button.navbar-toggler {
+        padding: 0;
+    }
 
     .desktop-logo {
         display: none;
@@ -635,6 +644,12 @@ nav ul li.active {
         background-color: #fff;
         color: var(--light-blue);
     }
+
+    .navbar-collapse.show {
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+    }
+
 }
 
 

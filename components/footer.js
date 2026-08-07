@@ -1,7 +1,7 @@
 function loadFooter() {
     return `
         <footer>
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
                 <div class="row g-1">
                     <div class="col-12 col-lg-4 mb-4 mb-lg-0">
                         <div id="footer-container" class="container-fluid px-0">
@@ -12,12 +12,12 @@ function loadFooter() {
                                 Minus
                                 qui placeat nam inventore nulla voluptatem.</p>
 
-                            <div class="row desktop-icons">
-                                <div class="col col-md-2"><ion-icon name="logo-facebook"></ion-icon></div>
-                                <div class="col col-md-2"><ion-icon name="logo-instagram"></ion-icon></div>
-                                <div class="col col-md-2"><ion-icon name="logo-youtube"></ion-icon></div>
-                                <div class="col col-md-2"><ion-icon name="logo-twitter"></ion-icon></div>
-                                <div class="col col-md-2"><ion-icon name="logo-linkedin"></ion-icon></div>
+                            <div class="desktop-icons">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <ion-icon name="logo-youtube"></ion-icon>
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <ion-icon name="logo-linkedin"></ion-icon>
                             </div>
                             <div class="row mobile-icons">
                                 <div class="col col-md-2">
@@ -155,7 +155,7 @@ function loadFooter() {
 
 
 
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4 pt-4"
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4 pt-4 pe-0"
                 id="copyright">
                 <div class="copyright-text">
                     <p>© 2022 dynamic. All rights reserved</p>

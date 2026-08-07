@@ -1,0 +1,57 @@
+.balance-content {
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+
+.history-summary-card {
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-header,
+.summary-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-header {
+    color: var(--light-grey);
+    font-size: 15px;
+}
+
+.summary-header ion-icon {
+    font-size: 20px;
+}
+
+.summary-value {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.summary-value ion-icon {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+@media (min-width: 992px) {
+    .col-left {
+        width: 70%;
+    }
+
+    .col-right {
+        width: 30%;
+    }
+}

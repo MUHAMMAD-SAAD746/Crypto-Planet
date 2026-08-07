@@ -14,9 +14,13 @@
     padding: 0;
 }
 
+
+.main-body#header header {
+    padding: 0 30px;
+}
+
 #banner {
     padding-top: 80px;
-
     padding-bottom: 40px !important;
 }
 
@@ -31,6 +35,10 @@
 
 #top-market {
     padding-top: 60px;
+}
+
+#top-market .px-xl-5 {
+    padding: 0 40px 50px !important;
 }
 
 .coin-card {
@@ -91,7 +99,7 @@
 }
 
 #get-started {
-    padding: 10px 82px;
+    padding: 10px 85px;
     background-color: var(--charcoal);
 }
 
@@ -145,6 +153,15 @@
     display: none;
 }
 
+#download-app {
+    padding-left: 25px;
+    padding-right: 17px;
+}
+
+#download-app .custom-pe {
+    padding-right: 2.1rem;
+}
+
 #download-app img {
     max-width: 100%;
     height: auto;
@@ -156,12 +173,35 @@
     transition: .3s;
 }
 
+#download-app .box-active {
+    background-color: #232531;
+}
+
+#download-app .box:not(.box-active) {
+    position: relative;
+}
+
+#download-app .box:not(.box-active)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background-color: #373A43;
+}
+
 #download-app .box:hover {
     transform: translateY(-5px);
 }
 
 .description {
     width: 50%;
+}
+
+section.services {
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .service-card {
@@ -190,10 +230,10 @@
 
 #investors {
     background-color: var(--charcoal);
-    padding: 80px 140px;
+    padding: 50px 140px;
 }
 
-#investors .row > div {
+#investors .row>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,10 +263,14 @@
     padding: 0 10px;
 }
 
-#minning {
-    padding: 50px 80px;
+
+.main-body.minning-body {
+    padding-top: 0 !important;
 }
 
+#minning {
+    padding: 50px 100px;
+}
 
 #minning-container {
     background-color: var(--light-blue);
@@ -259,54 +303,6 @@
     padding: 8px 20px;
     border-radius: 100px;
 }
-
-footer {
-    background-color: var(--charcoal);
-    padding: 40px;
-    color: #fff;
-    margin: 0;
-}
-
-footer p,
-footer li a {
-    color: var(--light-grey);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-footer p,
-footer ul {
-    margin-top: 40px;
-    padding-left: 0;
-}
-
-footer ul li {
-    line-height: 1.8;
-    list-style: none;
-}
-
-#copyright a {
-    text-decoration: none;
-    color: var(--light-grey);
-}
-
-#footer-links p {
-    font-size: 14px;
-}
-
-.footer-os {
-    background-color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.footer-os div p {
-    margin: 0;
-    font-size: 10px;
-}
-
 
 .coin-pagination {
     display: none;
@@ -364,7 +360,7 @@ footer ul li {
         display: none;
     }
 
-    #top-market .row > [class*="col-"] {
+    #top-market .row>[class*="col-"] {
         flex: 1 1 0;
         min-width: 250px;
         padding-left: 0;
@@ -375,6 +371,11 @@ footer ul li {
 
 
 @media (max-width:991px) {
+    .main-body {
+        padding-left: 22px;
+        padding-right: 24px;
+    }
+
     #header header .row {
         align-items: center;
     }
@@ -424,12 +425,17 @@ footer ul li {
     }
 
     #get-started {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 18px;
+        padding-right: 24px;
     }
 
     #download-app {
         text-align: center;
+        padding: 0 5px 0 0 !important;
+    }
+
+    #download-app .custom-pe {
+        padding-right: 0 !important;
     }
 
     #download-app .description {
@@ -449,6 +455,24 @@ footer ul li {
     .mobile-download-image {
         display: block;
         margin: 30px 0;
+    }
+
+    section.services {
+        padding: 0 0 25px;
+    }
+
+    .services .row {
+        margin-left: -20px !important;
+        margin-right: -24px !important;
+    }
+
+    section#investors {
+        padding: 80px 60px;
+    }
+
+    #investors .row {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #minning {
@@ -478,6 +502,19 @@ footer ul li {
         padding: 0 20px;
     }
 
+    .main-body header {
+        padding: 0 10px;
+    }
+
+    .main-body header #banner {
+        padding-top: 20px;
+        padding-bottom: 20px !important;
+    }
+
+    #top-market {
+        padding-top: 30px;
+    }
+
     #top-market .row>[class*="col-"] {
         flex: 0 0 70%;
         max-width: 70%;
@@ -494,6 +531,10 @@ footer ul li {
 
     section.services>p.w-50 {
         width: 90% !important;
+    }
+
+    div.service-card {
+        padding: 15px;
     }
 
     #minning {
@@ -547,6 +588,10 @@ footer ul li {
 
     #top-market .row {
         gap: 12px !important;
+    }
+
+    #top-market .px-xl-5 {
+        padding: 0 0 40px !important;
     }
 
     #top-market .row>[class*="col-"] {
@@ -608,8 +653,8 @@ footer ul li {
         font-size: 30px !important;
     }
 
-    #investors {
-        padding: 50px 50px;
+    section#investors {
+        padding: 30px 0;
     }
 
     #investors .d-flex {
@@ -617,12 +662,17 @@ footer ul li {
         padding-right: 0 !important;
     }
 
+    .main-body.minning-body {
+        padding: 30px 0 0 !important;
+    }
+
     #minning {
-        padding: 30px 10px;
+        padding: 30px 0;
     }
 
     #minning-container {
-        padding: 20px 15px;
+        padding: 20px 20px;
+        border-radius: 0;
     }
 
     #minning-col1 h3 {

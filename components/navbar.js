@@ -3,7 +3,7 @@ function loadNavbar() {
 
     return `
         <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
                 <!-- Logo -->
                 <div>
                     <img class="desktop-logo" src="./assets/images/logo.PNG" alt="Logo">
@@ -69,7 +69,7 @@ function loadNavbar() {
                                 <span>Trade History</span>
                             </button>
 
-                            <button class="auth-nav-btn">
+                            <button class="auth-nav-btn ${currentPage === 'wallet-history.html' ? 'active-auth-btn' : ''}" onclick="window.location.href='wallet-history.html'">
                                 <ion-icon name="wallet-outline"></ion-icon>
                                 <span>Wallet</span>
                             </button>
