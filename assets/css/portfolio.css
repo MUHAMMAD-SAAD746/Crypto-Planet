@@ -13,7 +13,7 @@
     background-color: var(--charcoal);
     border-radius: 8px;
     margin-top: 25px;
-    padding: 25px;
+    padding: 40px;
 }
 
 .allocation-header {
@@ -209,7 +209,8 @@
 
 /* Current Page */
 .pagination-number.active {
-    color: #8b8fa3;   /* dull color */
+    color: #8b8fa3;
+    /* dull color */
     font-weight: 600;
 }
 
@@ -272,12 +273,12 @@
         align-items: center;
     }
 
-    .market-card .market-price > span {
-    width: 100%;
-    text-align: right;
-}
+    .market-card .market-price>span {
+        width: 100%;
+        text-align: right;
+    }
 
-    .market-card .market-price{
+    .market-card .market-price {
         order: 3;
         display: flex;
         flex-direction: column;
@@ -317,6 +318,10 @@
         display: none;
     }
 
+    .allocation-section {
+        padding: 20px;
+    }
+
     .allocation-filter-btn,
     .allocation-view-btn,
     .order-qty-col,
@@ -324,13 +329,6 @@
         display: none !important;
     }
 }
-
-
-/* @media (max-width: 600px) {
-    .avg-buy-col {
-        display: none !important;
-    }
-} */
 
 @media (max-width: 575.98px) {
     .allocation-table-row .coin-info {
@@ -362,18 +360,6 @@
 
 
 @media (max-width: 480px) {
-    /* .coin-info-mobile {
-        flex-direction: column;
-        align-items: flex-start !important;
-    } */
-
-    /* .market-card .coin-name .coin-tag {
-        margin-left: 0;
-        margin-top: 4px;
-        background-color: var(--charcoal);
-        padding-left: 0;
-    } */
-
     .portfolio-item .portfolio-value {
         font-size: 20px;
     }
@@ -381,5 +367,64 @@
     .allocation-filter-btn,
     .allocation-view-btn {
         display: none !important;
+    }
+
+    .allocation-table-header > div:first-child,
+    .allocation-table-row > .coin-name {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+
+
+
+
+@media (max-width: 350px) {
+
+    .allocation-table-header > div:first-child,
+    .allocation-table-row > .coin-name {
+        flex: 0 0 40%;
+        max-width: 40%;
+        min-width: 0;
+    }
+
+    /* Keep coin content inside Pair/Holding column */
+    .allocation-table-row > .coin-name {
+        overflow: hidden;
+    }
+
+    .allocation-table-row .coin-info {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .allocation-table-row .coin-title,
+    .allocation-table-row .coin-tag {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Asset Value */
+    .allocation-table-header > div:nth-child(5),
+    .allocation-table-row > div:nth-child(5) {
+        flex: 0 0 30%;
+        max-width: 30%;
+        min-width: 0;
+    }
+
+    /* Profit / Loss */
+    .allocation-table-header > .profit-col,
+    .allocation-table-row > .profit-col {
+        flex: 0 0 30%;
+        max-width: 30%;
+        min-width: 0;
+    }
+
+    .allocation-table-row .profit-col > div {
+        width: 100%;
+        white-space: nowrap;
     }
 }

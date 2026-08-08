@@ -33,6 +33,7 @@ body {
 #card input {
     background-color: transparent;
     border: none;
+    border-radius: 8px;
     outline: none;
     color: white;
     padding: 12px 5px;
@@ -40,6 +41,11 @@ body {
 
 #card input::placeholder {
     color: #888;
+}
+
+#card input:focus {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .login-options {
@@ -94,7 +100,8 @@ body {
 .divider-text::after {
     content: "";
     height: 1px;
-    background-color: #555;
+    /* background-color: #555; */
+    background-color: #fff;
     flex: 1;
 }
 
@@ -116,6 +123,10 @@ body {
 
     color: white;
     font-size: 24px;
+}
+
+.social-icon.active {
+    border: 1px solid var(--primary-color);
 }
 
 
