@@ -51,10 +51,6 @@ nav img {
     display: block;
 }
 
-/* .navbar-custom.authenticated {
-    background: var(--charcoal);
-} */
-
 .navbar-custom.authenticated .desktop-logo {
     display: none;
 }
@@ -203,7 +199,6 @@ nav ul li.active a {
     display: flex;
 }
 
-/* Profile dropdown */
 .profile-dropdown {
     margin-left: 10px;
 }
@@ -258,8 +253,8 @@ nav ul li.active a {
 .profile-btn img {
     border: none;
 }
-
 /* ================================= */
+
 
 #register-btn {
     background-color: var(--primary-color);
@@ -428,7 +423,6 @@ nav ul li.active {
         border-radius: 5px;
     }
 
-    /* Links */
     .nav-list {
         width: 100%;
         flex-direction: column;
@@ -441,23 +435,16 @@ nav ul li.active {
     nav .nav-list li {
         width: 100%;
         height: 38px;
-
         display: flex;
         align-items: center;
-
         gap: 10px;
-
         border-bottom: none !important;
     }
 
-    /* Show icons */
     .nav-list li ion-icon {
         display: inline-block;
-
         font-size: 18px;
-
         flex-shrink: 0;
-
         color: #fff;
     }
 
@@ -473,19 +460,17 @@ nav ul li.active {
     }
 
 
-    /* Active text */
     nav ul li.active a {
         color: var(--primary-color) !important;
     }
 
 
-    /* Active icon */
     nav ul li.active ion-icon {
         color: var(--primary-color) !important;
     }
 
     /* Dropdown */
-    .dropdown {
+    .dropdown:not(.profile-dropdown){
         width: 100%;
         display: block;
         margin: 8px 0 5px;
@@ -541,7 +526,7 @@ nav ul li.active {
     }
 
     /* css for authenticated user navbar */
-    .auth-links {
+    .navbar-custom.authenticated .auth-links {
         display: flex;
         width: 100%;
         gap: 12px;
@@ -560,7 +545,7 @@ nav ul li.active {
         flex-shrink: 0;
     }
 
-    .profile-dropdown {
+    .navbar-custom.authenticated .profile-dropdown {
         width: 100%;
         margin: 15px 0;
     }
@@ -613,16 +598,14 @@ nav ul li.active {
         font-size: 18px;
     }
 
-    .profile-dropdown,
-    .dropdown.profile-dropdown {
-        display: block !important;
+    .navbar-custom.authenticated .profile-dropdown {
+        display: block;
         width: 100%;
-        flex: none !important;
+        flex: none;
     }
-
     /* ============================== */
 
-    /* Buttons */
+
     .nav-buttons {
         width: 100%;
         display: flex;
